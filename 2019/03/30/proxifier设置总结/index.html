@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;python入门之外星人入侵。画出游戏窗口，对飞船进行定义，设置移动方式与事件响应。">
+<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;刚好看到有人提起proxifier，就顺便下载来设置了一下，发现下载器连接的问题也随之解决了，可喜可贺。以下记录简要步骤。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="外星人入侵（1） 基础设置与事件响应">
-<meta property="og:url" content="https://szkm330.github.io/2019/03/28/外星人入侵（1）-基础设置与事件响应/index.html">
+<meta property="og:title" content="proxifier设置总结">
+<meta property="og:url" content="https://szkm330.github.io/2019/03/30/proxifier设置总结/index.html">
 <meta property="og:site_name" content="SK&#39;s Nikkichou">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;python入门之外星人入侵。画出游戏窗口，对飞船进行定义，设置移动方式与事件响应。">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;刚好看到有人提起proxifier，就顺便下载来设置了一下，发现下载器连接的问题也随之解决了，可喜可贺。以下记录简要步骤。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-28T15:48:34.282Z">
+<meta property="og:updated_time" content="2019-03-30T06:49:29.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="外星人入侵（1） 基础设置与事件响应">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;python入门之外星人入侵。画出游戏窗口，对飞船进行定义，设置移动方式与事件响应。">
+<meta name="twitter:title" content="proxifier设置总结">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;刚好看到有人提起proxifier，就顺便下载来设置了一下，发现下载器连接的问题也随之解决了，可喜可贺。以下记录简要步骤。">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://szkm330.github.io/2019/03/28/外星人入侵（1）-基础设置与事件响应/">
+  <link rel="canonical" href="https://szkm330.github.io/2019/03/30/proxifier设置总结/">
 
 
 
 
 
-  <title>外星人入侵（1） 基础设置与事件响应 | SK's Nikkichou</title>
+  <title>proxifier设置总结 | SK's Nikkichou</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/03/28/外星人入侵（1）-基础设置与事件响应/">
+    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/03/30/proxifier设置总结/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="szkm330">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">外星人入侵（1） 基础设置与事件响应</h1>
+          <h1 class="post-title" itemprop="name headline">proxifier设置总结</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T13:00:38+08:00">
-                2019-03-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-30T14:20:21+08:00">
+                2019-03-30
               </time>
             
 
@@ -304,8 +304,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/杂记/" itemprop="url" rel="index">
+                    <span itemprop="name">杂记</span>
                   </a>
                 </span>
 
@@ -341,130 +341,12 @@
       
 
       
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>python入门之外星人入侵。<br>画出游戏窗口，对飞船进行定义，设置移动方式与事件响应。</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>刚好看到有人提起proxifier，就顺便下载来设置了一下，发现下载器连接的问题也随之解决了，可喜可贺。<br>以下记录简要步骤。</p>
 <a id="more"></a>
-<p><strong>settings.py</strong></p>
-<pre><code>class Settings():    
-       def __init__(self):
-           &quot;&quot;&quot;初始化游戏设置&quot;&quot;&quot;
-
-           # 屏幕设置
-           self.screen_width = 1200
-           self.screen_height = 800
-           self.bg_color = (230, 230, 230)       
-
-           # 飞船设置
-           self.ship_speed_factor = 1.5
-</code></pre><p>settings.py负责各种设置，随着进度还会有不同的改动，目前而言是这样的。</p>
-<p><strong>game_functions.py</strong></p>
-<pre><code>import sys
-   import pygame
-
-
-   def check_keydown_events(event, ship):
-       &quot;&quot;&quot;响应按键&quot;&quot;&quot;
-       if event.key == pygame.K_RIGHT:
-           ship.moving_right = True
-       elif event.key == pygame.K_LEFT:
-           ship.moving_left = True
-
-   def check_keyup_events(event, ship):
-       &quot;&quot;&quot;响应松开&quot;&quot;&quot;
-       if event.key == pygame.K_RIGHT:
-           ship.moving_right = False
-       elif event.key == pygame.K_LEFT:
-           ship.moving_left = False    
-
-   def check_events(ship):
-       &quot;&quot;&quot;响应按键和鼠标事件&quot;&quot;&quot;
-       for event in pygame.event.get():
-               if event.type == pygame.QUIT:
-                   sys.exit()
-               elif event.type == pygame.KEYDOWN:
-                   check_keydown_events(event, ship)                
-               elif event.type == pygame.KEYUP:
-                   check_keyup_events(event, ship)
-
-   def update_screen(ai_settings, screen, ship):
-       &quot;&quot;&quot;更新屏幕上的图像并切换到新屏幕&quot;&quot;&quot;
-       # 每次循环都重绘屏幕
-       screen.fill(ai_settings.bg_color)  # 填充背景色
-       ship.blitme()
-
-       # 让最近绘制的屏幕可见
-       pygame.display.flip() # 更新显示到屏幕表面
-</code></pre><p>game_functions.py负责游戏的功能。<br>建立ship_moving_xx状态，使移动可以通过识别键盘按下和松开。</p>
-<p><strong>ship.py</strong></p>
-<pre><code>import pygame
-
-class Ship():
-
-    def __init__(self, ai_settings, screen):
-        &quot;&quot;&quot;初始化飞船并设置其位置&quot;&quot;&quot;
-        self.screen = screen
-        self.ai_settings = ai_settings
-
-        # 加载飞船图像并获取其外接矩形
-        self.image = pygame.image.load(r&apos;D:\project\alien_invasion\images\ship.bmp&apos;)
-        self.rect = self.image.get_rect()
-        self.screen_rect = screen.get_rect()
-
-        # 将每艘新飞船放在屏幕底部中央
-        self.rect.centerx = self.screen_rect.centerx
-        self.rect.bottom = self.screen_rect.bottom
-
-        # 在飞船的属性center中存储小数值
-        self.center = float(self.rect.centerx)
-
-        # 移动标志
-        self.moving_right = False
-        self.moving_left = False
-
-
-    def update(self):
-        &quot;&quot;&quot;根据移动标志调整飞船位置&quot;&quot;&quot;
-        # 更新飞船的center值，而不是rect
-        if self.moving_right and self.rect.right &lt; self.screen_rect.right:
-            self.center += self.ai_settings.ship_speed_factor
-        if self.moving_left and self.rect.left &gt; 0:
-            self.center -= self.ai_settings.ship_speed_factor
-
-        # 根据self.center更新rect对象
-        self.rect.centerx = self.center
-
-
-    def blitme(self):
-        &quot;&quot;&quot;在指定位置绘制飞船&quot;&quot;&quot;
-        self.screen.blit(self.image, self.rect)
-</code></pre><p>pygame.image.load()默认后接.convert()，将图像数据转化为Surface对象。<br>.convert_alpha()则为保留了alpha通道。<br>路径前加r，使转义反斜杠\无效，也可以用双斜杠\\<br><code>blit(要画的图片, 要画的位置)</code>是一个Surface类在自己身上画图。前者类型是Surface，后者要用get_rect()获得rect。</p>
-<p><strong>alien_invasion.py</strong></p>
-<pre><code>import pygame
-from settings import Settings
-from ship import Ship
-import game_functions as gf
-
-
-def run_game():
-    # 初始化pygame、设置和屏幕对象
-    pygame.init()
-    ai_settings = Settings()
-    screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
-    pygame.display.set_caption(&quot;Alien Invasion&quot;)
-
-    # 创建一艘飞船
-    ship = Ship(ai_settings, screen)
-
-    # 开始游戏的主循环
-    while True:
-        gf.check_events(ship)
-        ship.update()
-        gf.update_screen(ai_settings, screen, ship)
-
-
-run_game()
-</code></pre><p>   游戏的主循环为无限循环，直到用户跳出。在循环中需要不断的画背景更新位置。<br>  pygame.display.set_mode会返回一个Surface对象</p>
-<pre><code>pygame.display.set_mode([SCREEN_WIDTH,SCREEN_HEIGHT],0,32)
-</code></pre><p>set_mode会返回一个Surface对象，代表了在桌面上出现的那个窗口，三个参数第一个为元祖，代表分 辨率（必须）；<br>第二个是一个标志位，如果不用什么特性，就指定0；0表示不使用特性，可用FULLSCREEN,RESIZEBLE,NOFRAME,DOUBLEBUF(双缓冲，使用时需用pygame.display.flip()来刷新屏幕)等替换。<br>第三个为色深。<br>当我们把第二个参数设置为FULLSCREEN时，就能得到一个全屏窗口了</p>
+<h5 id="proxy-servers"><a href="#proxy-servers" class="headerlink" title="proxy servers"></a>proxy servers</h5><p>127.0.0.1  1080<br>socks5<br>检查check<br>确定<br><strong>此时默认全部走全局</strong></p>
+<h5 id="rules编辑"><a href="#rules编辑" class="headerlink" title="rules编辑"></a>rules编辑</h5><p>添加规则，<strong>选择Shadowsocks.exe为直连direct</strong><br>（允许发送到代理服务器的数据包通过，防止循环代理错误）<br><strong>还可以再添加rule，如把QQ.exe设置为direct</strong></p>
+<h5 id="Name-Resolution"><a href="#Name-Resolution" class="headerlink" title="Name Resolution"></a>Name Resolution</h5><p>Resolve hostnames through proxy 防止DNS污染</p>
+<p>*注册码备份在百度和OneDrive</p>
 
       
     </div>
@@ -489,8 +371,8 @@ run_game()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/07/190107-最后一圈/" rel="next" title="190107 最后一圈">
-                <i class="fa fa-chevron-left"></i> 190107 最后一圈
+              <a href="/2019/03/28/外星人入侵（1）-基础设置与事件响应/" rel="next" title="外星人入侵（1） 基础设置与事件响应">
+                <i class="fa fa-chevron-left"></i> 外星人入侵（1） 基础设置与事件响应
               </a>
             
           </div>
@@ -498,10 +380,6 @@ run_game()
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/30/proxifier设置总结/" rel="prev" title="proxifier设置总结">
-                proxifier设置总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -553,8 +431,17 @@ run_game()
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -607,6 +494,22 @@ run_game()
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#proxy-servers"><span class="nav-number">1.</span> <span class="nav-text">proxy servers</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#rules编辑"><span class="nav-number">2.</span> <span class="nav-text">rules编辑</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Name-Resolution"><span class="nav-number">3.</span> <span class="nav-text">Name Resolution</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
