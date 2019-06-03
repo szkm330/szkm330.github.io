@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;剩下最后一圈了，数据结构期末考+课设。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;かなり地獄だけど、やるしかないな…&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;忘记说了，新年快乐。">
+<meta name="description" content="用的是Ubuntu16.04，主要流程如下：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="190107 最后一圈">
-<meta property="og:url" content="https://szkm330.github.io/2019/01/07/190107-最后一圈/index.html">
+<meta property="og:title" content="v2ray自用流程">
+<meta property="og:url" content="https://szkm330.github.io/2019/06/03/v2ray自用流程/index.html">
 <meta property="og:site_name" content="SK&#39;s Nikkichou">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;剩下最后一圈了，数据结构期末考+课设。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;かなり地獄だけど、やるしかないな…&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;忘记说了，新年快乐。">
+<meta property="og:description" content="用的是Ubuntu16.04，主要流程如下：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T09:49:34.258Z">
+<meta property="og:updated_time" content="2019-06-03T10:14:36.996Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="190107 最后一圈">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;剩下最后一圈了，数据结构期末考+课设。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;かなり地獄だけど、やるしかないな…&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;忘记说了，新年快乐。">
+<meta name="twitter:title" content="v2ray自用流程">
+<meta name="twitter:description" content="用的是Ubuntu16.04，主要流程如下：">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://szkm330.github.io/2019/01/07/190107-最后一圈/">
+  <link rel="canonical" href="https://szkm330.github.io/2019/06/03/v2ray自用流程/">
 
 
 
 
 
-  <title>190107 最后一圈 | SK's Nikkichou</title>
+  <title>v2ray自用流程 | SK's Nikkichou</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/01/07/190107-最后一圈/">
+    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/06/03/v2ray自用流程/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="szkm330">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">190107 最后一圈</h1>
+          <h1 class="post-title" itemprop="name headline">v2ray自用流程</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-07T17:26:13+08:00">
-                2019-01-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-03T17:55:00+08:00">
+                2019-06-03
               </time>
             
 
@@ -304,8 +304,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/日记/" itemprop="url" rel="index">
-                    <span itemprop="name">日记</span>
+                  <a href="/categories/杂记/" itemprop="url" rel="index">
+                    <span itemprop="name">杂记</span>
                   </a>
                 </span>
 
@@ -341,7 +341,23 @@
       
 
       
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;剩下最后一圈了，数据结构期末考+课设。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;かなり地獄だけど、やるしかないな…<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;忘记说了，新年快乐。</p>
+        <p>用的是Ubuntu16.04，主要流程如下：<br><a id="more"></a></p>
+<pre><code> # 刷新源及更新软件
+ sudo apt-get update &amp;&amp; sudo apt-get upgrade
+ # 安装 curl
+ sudo apt install curl
+ 如果不是 root 环境需要进入
+ sudo su
+ 接着就可以安装 Project V(V2Ray) 了
+--以上：不知道是不是必须，姑且做一下--   
+
+ bash &lt;(curl -L -s https://install.direct/go.sh)
+ # 上列命令会自动安装 V2Ray，然后执行下面命令运行
+ systemctl start v2ray
+</code></pre><p>记下端口号和id</p>
+<p><code>vim /etc/v2ray/config.json</code>进行修改和查看<br><code>systemctl start|restart|stop|status v2ray</code>其余控制<br><code>https://www.uuidgenerator.net/</code> 可以生成ID</p>
+<p><strong>客户端相关</strong><br>下载<code>v2ray-windows-64.zip</code>（然后直接编辑config似乎就可以了）<br>不过可以继续下载<code>v2rayN.zip</code>解压至同一个路径下<br>接着把相应信息填进去，大概就可以了</p>
+<p>若要升级，直接再运行一次安装脚本</p>
 
       
     </div>
@@ -366,8 +382,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/30/181230-离散求过/" rel="next" title="181230 离散求过">
-                <i class="fa fa-chevron-left"></i> 181230 离散求过
+              <a href="/2019/06/02/图形界面初试/" rel="next" title="图形界面初试">
+                <i class="fa fa-chevron-left"></i> 图形界面初试
               </a>
             
           </div>
@@ -375,10 +391,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/28/外星人入侵（1）-基础设置与事件响应/" rel="prev" title="外星人入侵（1） 基础设置与事件响应">
-                外星人入侵（1） 基础设置与事件响应 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
