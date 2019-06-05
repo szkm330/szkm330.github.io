@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="SK&#39;s Nikkichou">
 <meta property="og:description" content="又研究了一下ws+tls，其实我也不知道有没有搞出来，也不知道到底效果如何，姑且搞一下…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-04T13:39:15.933Z">
+<meta property="og:updated_time" content="2019-06-05T09:06:15.650Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v2ray绚烂装订版">
 <meta name="twitter:description" content="又研究了一下ws+tls，其实我也不知道有没有搞出来，也不知道到底效果如何，姑且搞一下…">
@@ -361,11 +361,17 @@ source ~/.bashrc  # 确保脚本所设置的命令别名生效
 <pre><code>sudo apt-get install socat
 </code></pre><p>如果安装报错，那么可能是因为系统缺少 acme.sh 所需要的依赖项<code>sudo apt-get -y install netcat</code><br>开始生成证书，注意改成自己的域名</p>
 <pre><code>sudo ~/.acme.sh/acme.sh --issue -d mydomain.me --standalone -k ec-256
-</code></pre><p>脚本会自动更新，然后手动更新：</p>
+</code></pre><p>脚本每隔60天会自动更新，然后手动更新：</p>
 <pre><code>sudo ~/.acme.sh/acme.sh --renew -d mydomain.com --force --ecc
 </code></pre><p>将证书和密钥安装到 /etc/v2ray 中</p>
 <pre><code>sudo ~/.acme.sh/acme.sh --installcert -d mydomain.me --fullchainpath /etc/v2ray/v2ray.crt --keypath /etc/v2ray/v2ray.key --ecc
-</code></pre><p>5：安装nginx<br>ubuntu安装nginx</p>
+</code></pre><p>升级 acme.sh 到最新版 :</p>
+<pre><code>acme.sh --upgrade
+</code></pre><p>可以开启自动升级:</p>
+<pre><code>acme.sh --upgrade --auto-upgrade
+</code></pre><p>关闭自动更新:</p>
+<pre><code>acme.sh --upgrade --auto-upgrade 0
+</code></pre><p>、<br>5：安装nginx<br>ubuntu安装nginx</p>
 <pre><code>sudo apt-get install nginx
 </code></pre><p>开启nginx</p>
 <pre><code>sudo /etc/init.d/nginx start
@@ -455,6 +461,10 @@ source ~/.bashrc  # 确保脚本所设置的命令别名生效
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/06/05/告一段落的nginx/" rel="prev" title="告一段落的nginx">
+                告一段落的nginx <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -523,7 +533,7 @@ source ~/.bashrc  # 确保脚本所设置的命令别名生效
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
