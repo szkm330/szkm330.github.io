@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="SK&#39;s Nikkichou">
 <meta property="og:description" content="pyinstaller打包exe过程，因程序简单尚未踩坑。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-14T12:32:09.037Z">
+<meta property="og:updated_time" content="2019-06-14T12:38:47.692Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pyinstaller打包">
 <meta name="twitter:description" content="pyinstaller打包exe过程，因程序简单尚未踩坑。">
@@ -379,8 +379,12 @@
 </tr>
 </tbody>
 </table>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pyinstaller.py -F -p C:\python27; ..\demo.py  #注意当前目录是我在下一级目录里</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
-<p>pyinstaller.py -F -p C:\python27; -i ..\a.ico ..\demo.py<br><code>`</code></p>
+<pre><code>pyinstaller.py -F -p C:\python27; ..\demo.py  #注意当前目录是我在下一级目录里
+
+
+
+pyinstaller.py -F -p C:\python27; -i ..\a.ico ..\demo.py
+</code></pre><p>最后测试一下代码高亮<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">a = open(<span class="string">'text.txt'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    text=a.readline().strip(<span class="string">'\n'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> text:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    text=text.replace(<span class="string">'&amp;#'</span>,<span class="string">''</span>)</span><br><span class="line">    text=[i <span class="keyword">for</span> i <span class="keyword">in</span> text.split(<span class="string">';'</span>) <span class="keyword">if</span> i]</span><br><span class="line">    text=[hex(int(i)) <span class="keyword">for</span> i <span class="keyword">in</span> text]</span><br><span class="line">    text=[i.replace(<span class="string">'0x'</span>,<span class="string">''</span>) <span class="keyword">for</span> i <span class="keyword">in</span> text]</span><br><span class="line">    string=<span class="string">''</span></span><br><span class="line">    flag=<span class="string">'\\u'</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> text:</span><br><span class="line">                string+=flag+format(i,<span class="string">'0&gt;4s'</span>)</span><br><span class="line">    print(string.encode(<span class="string">'utf-8'</span>).decode(<span class="string">'unicode-escape'</span>))</span><br><span class="line">    </span><br><span class="line">a.close()</span><br><span class="line">print(<span class="string">'\n\n'</span>)</span><br><span class="line">input(<span class="string">'按回车键退出...'</span>)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
