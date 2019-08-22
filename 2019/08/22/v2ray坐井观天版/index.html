@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="SK&#39;s Nikkichou">
 <meta property="og:description" content="我又来了，为了证书操碎了心。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-22T13:46:01.842Z">
+<meta property="og:updated_time" content="2019-08-22T13:58:30.586Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v2ray坐井观天版">
 <meta name="twitter:description" content="我又来了，为了证书操碎了心。">
@@ -370,7 +370,7 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
 sudo apt-get install python-certbot-nginx
-</code></pre><p>执行<code>certbot --nginx</code>按指示选1、2，自动设置https<br>更新<code>certbot renew  # 关闭nginx</code><br>查看证书<code>certbot certificates</code></p>
+</code></pre><p>执行<code>certbot --nginx</code>按指示选1、2，自动设置https<br>更新<code>certbot renew  # 关闭nginx</code><br>它只会更新快要过期的证书，所以频繁运行也没有问题<br>更新前可以用certbot renew –dry-run进行演习（？）<br>查看证书<code>certbot certificates</code></p>
 <p>6：检查<br>测试证书是否正常<code>https://www.ssllabs.com/ssltest/index.html</code></p>
 <p>7：配置</p>
 <pre><code># 服务端
