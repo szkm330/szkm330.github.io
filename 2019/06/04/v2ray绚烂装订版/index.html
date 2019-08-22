@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="SK&#39;s Nikkichou">
 <meta property="og:description" content="又研究了一下ws+tls，其实我也不知道有没有搞出来，也不知道到底效果如何，姑且搞一下…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-05T09:06:15.650Z">
+<meta property="og:updated_time" content="2019-08-22T08:02:09.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v2ray绚烂装订版">
 <meta name="twitter:description" content="又研究了一下ws+tls，其实我也不知道有没有搞出来，也不知道到底效果如何，姑且搞一下…">
@@ -426,7 +426,7 @@ source ~/.bashrc  # 确保脚本所设置的命令别名生效
   }
 }
 </code></pre><p>客户端：<br>照着填，地址填域名</p>
-<p>8：改进<br>目前的nginx还只是一个welcome页面，待搞清楚后再弄吧。</p>
+<p>8：改进<br>目前的nginx还只是一个welcome页面，待搞清楚后再弄吧。<br>↓<br>姑且在默认的HTML页面进行了修改<br>↓<br>自动更新似乎不好使，转为手动：<br>‘’’<br>systemctl stop nginx # 先停止占用端口<br>acme.sh –renew-all<br>‘’’</p>
 
       
     </div>
