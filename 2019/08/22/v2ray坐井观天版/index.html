@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="首先画图，保存test.ui。进入test.ui所在文件目录，输入命令pyuic5 test.ui –o test.py将test.py开头的from PyQt5 import这行抄进去再加上import sys  import test">
+<meta name="description" content="我又来了，为了证书操碎了心。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图形界面初试">
-<meta property="og:url" content="https://szkm330.github.io/2019/06/02/图形界面初试/index.html">
+<meta property="og:title" content="v2ray坐井观天版">
+<meta property="og:url" content="https://szkm330.github.io/2019/08/22/v2ray坐井观天版/index.html">
 <meta property="og:site_name" content="SK&#39;s Nikkichou">
-<meta property="og:description" content="首先画图，保存test.ui。进入test.ui所在文件目录，输入命令pyuic5 test.ui –o test.py将test.py开头的from PyQt5 import这行抄进去再加上import sys  import test">
+<meta property="og:description" content="我又来了，为了证书操碎了心。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006fiOeIly1g3n8mmwc64j30k70fsa9y.jpg">
-<meta property="og:updated_time" content="2019-06-02T15:44:41.155Z">
+<meta property="og:updated_time" content="2019-08-22T13:46:01.842Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图形界面初试">
-<meta name="twitter:description" content="首先画图，保存test.ui。进入test.ui所在文件目录，输入命令pyuic5 test.ui –o test.py将test.py开头的from PyQt5 import这行抄进去再加上import sys  import test">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006fiOeIly1g3n8mmwc64j30k70fsa9y.jpg">
+<meta name="twitter:title" content="v2ray坐井观天版">
+<meta name="twitter:description" content="我又来了，为了证书操碎了心。">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://szkm330.github.io/2019/06/02/图形界面初试/">
+  <link rel="canonical" href="https://szkm330.github.io/2019/08/22/v2ray坐井观天版/">
 
 
 
 
 
-  <title>图形界面初试 | SK's Nikkichou</title>
+  <title>v2ray坐井观天版 | SK's Nikkichou</title>
   
 
 
@@ -254,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/06/02/图形界面初试/">
+    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/08/22/v2ray坐井观天版/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="szkm330">
@@ -271,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">图形界面初试</h1>
+          <h1 class="post-title" itemprop="name headline">v2ray坐井观天版</h1>
         
 
         <div class="post-meta">
@@ -283,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-02T23:42:52+08:00">
-                2019-06-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-22T21:45:02+08:00">
+                2019-08-22
               </time>
             
 
@@ -343,26 +341,182 @@
       
 
       
-        <p>首先画图，保存test.ui。<br>进入test.ui所在文件目录，输入命令<code>pyuic5 test.ui –o test.py</code><br>将test.py开头的<code>from PyQt5 import</code>这行抄进去<br>再加上<code>import sys</code>  <code>import test</code><br><a id="more"></a><br>有两种基类QMainWindow和QWidget，使用时可以用一下代码。</p>
-<pre><code># QMainWindow的场合
-if __name__ ==&apos;__main__&apos;:
-    app = QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = test.Ui_MainWindow()  # 照抄test.py里的类名
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+        <p>我又来了，为了证书操碎了心。</p>
+<a id="more"></a>
+<p>1：基本安装</p>
+<pre><code># 刷新源及更新软件
+sudo apt-get update &amp;&amp; sudo apt-get upgrade
+# 脚本安装v2ray
+bash &lt;(curl -L -s https://install.direct/go.sh)
+# 编辑 V2Ray 配置
+vim /etc/v2ray/config.json
+</code></pre><p>2：bbr</p>
+<pre><code>wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh    
+ chmod +x bbr.sh    
+./bbr.sh
+</code></pre><p>3：注册域名，A 记录指向自己</p>
+<p>4：安装nginx</p>
+<pre><code>ubuntu安装nginx
+sudo apt-get install nginx
+开启nginx
+sudo /etc/init.d/nginx start
+开机自启动
+systemctl enable nginx
+重载nginx
+/etc/init.d/nginx reload
+</code></pre><p>5：安装certbot<br>依次</p>
+<pre><code>sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx
+</code></pre><p>执行<code>certbot --nginx</code>按指示选1、2，自动设置https<br>更新<code>certbot renew  # 关闭nginx</code><br>查看证书<code>certbot certificates</code></p>
+<p>6：检查<br>测试证书是否正常<code>https://www.ssllabs.com/ssltest/index.html</code></p>
+<p>7：配置</p>
+<pre><code># 服务端
+{
+&quot;inbounds&quot;: [
+    {
+      &quot;port&quot;: 330, 
+      &quot;protocol&quot;: &quot;vmess&quot;,    
+      &quot;settings&quot;: {
+        &quot;clients&quot;: [
+          {
+            &quot;id&quot;: &quot;exxxxc-d210-455d-a737-xxxxx2fa5a&quot;,  
+            &quot;alterId&quot;: 64
+          }
+        ]
+      },
+      &quot;streamSettings&quot;: {
+        &quot;network&quot;: &quot;ws&quot;,
+        &quot;security&quot;: &quot;tls&quot;, 
+        &quot;tlsSettings&quot;: {
+          &quot;certificates&quot;: [
+            {
+              &quot;certificateFile&quot;: &quot;/etc/letsencrypt/live/www.xxx.com/fullchain.pem&quot;, 
+              &quot;keyFile&quot;: &quot;/etc/letsencrypt/live/www.xxx.com/privkey.pem&quot; 
+            }
+          ]
+        }
+      }
+    }
+  ],
+  &quot;outbounds&quot;: [
+    {
+      &quot;protocol&quot;: &quot;freedom&quot;,
+      &quot;settings&quot;: {}
+    }
+  ]
+}
 
 
- # QWidget的场合
-    if  __name__==&quot;__main__&quot;:
-        app=QtWidgets.QApplication(sys.argv)  
-        widget=QtWidgets.QWidget()  
-        ui=test.Ui_Form()  
-        ui.setupUi(widget)  
-        widget.show()  
-        sys.exit(app.exec_())  
-</code></pre><p>最后再测试一下插入图片：<br><img src="https://ws1.sinaimg.cn/large/006fiOeIly1g3n8mmwc64j30k70fsa9y.jpg" alt="测试"></p>
+
+
+
+
+# 客户端
+{
+  &quot;log&quot;: {
+    &quot;access&quot;: &quot;&quot;,
+    &quot;error&quot;: &quot;&quot;,
+    &quot;loglevel&quot;: &quot;warning&quot;
+  },
+  &quot;inbounds&quot;: [
+    {
+      &quot;port&quot;: 1080,
+      &quot;listen&quot;: &quot;127.0.0.1&quot;,
+      &quot;protocol&quot;: &quot;socks&quot;,
+      &quot;sniffing&quot;: {
+        &quot;enabled&quot;: true,
+        &quot;destOverride&quot;: [
+          &quot;http&quot;,
+          &quot;tls&quot;
+        ]
+      },
+      &quot;settings&quot;: {
+        &quot;auth&quot;: &quot;noauth&quot;,
+        &quot;udp&quot;: true,
+        &quot;ip&quot;: null,
+        &quot;clients&quot;: null
+      },
+      &quot;streamSettings&quot;: null
+    }
+  ],
+  &quot;outbounds&quot;: [
+    {
+      &quot;tag&quot;: &quot;proxy&quot;,
+      &quot;protocol&quot;: &quot;vmess&quot;,
+      &quot;settings&quot;: {
+        &quot;vnext&quot;: [
+          {
+            &quot;address&quot;: &quot;www.xxx.com&quot;,
+            &quot;port&quot;: 330,
+            &quot;users&quot;: [
+              {
+                &quot;id&quot;: &quot;efxxxxc-d210-455d-a737-xxxxxeb2fa5a&quot;,
+                &quot;alterId&quot;: 64,
+                &quot;email&quot;: &quot;t@t.tt&quot;,
+                &quot;security&quot;: &quot;auto&quot;
+              }
+            ]
+          }
+        ],
+        &quot;servers&quot;: null,
+        &quot;response&quot;: null
+      },
+      &quot;streamSettings&quot;: {
+        &quot;network&quot;: &quot;ws&quot;,
+        &quot;security&quot;: &quot;tls&quot;,
+        &quot;tlsSettings&quot;: {
+          &quot;allowInsecure&quot;: true,
+          &quot;serverName&quot;: null
+        },
+        &quot;tcpSettings&quot;: null,
+        &quot;kcpSettings&quot;: null,
+        &quot;wsSettings&quot;: {
+          &quot;connectionReuse&quot;: true,
+          &quot;path&quot;: null,
+          &quot;headers&quot;: null
+        },
+        &quot;httpSettings&quot;: null,
+        &quot;quicSettings&quot;: null
+      },
+      &quot;mux&quot;: {
+        &quot;enabled&quot;: true
+      }
+    },
+    {
+      &quot;tag&quot;: &quot;direct&quot;,
+      &quot;protocol&quot;: &quot;freedom&quot;,
+      &quot;settings&quot;: {
+        &quot;vnext&quot;: null,
+        &quot;servers&quot;: null,
+        &quot;response&quot;: null
+      },
+      &quot;streamSettings&quot;: null,
+      &quot;mux&quot;: null
+    },
+    {
+      &quot;tag&quot;: &quot;block&quot;,
+      &quot;protocol&quot;: &quot;blackhole&quot;,
+      &quot;settings&quot;: {
+        &quot;vnext&quot;: null,
+        &quot;servers&quot;: null,
+        &quot;response&quot;: {
+          &quot;type&quot;: &quot;http&quot;
+        }
+      },
+      &quot;streamSettings&quot;: null,
+      &quot;mux&quot;: null
+    }
+  ],
+  &quot;dns&quot;: null,
+  &quot;routing&quot;: {
+    &quot;domainStrategy&quot;: &quot;IPIfNonMatch&quot;,
+    &quot;rules&quot;: []
+  }
+}
+</code></pre><p>7：总结<br>网站算是挂上了证书，但似乎是端口的原因，导致全部设443的话就只能启动v2ray和nginx的其中之一。妥协之下换了个330，但这样就意味着没有解决问题，也没有真正意义上实现tls。</p>
 
       
     </div>
@@ -387,8 +541,8 @@ if __name__ ==&apos;__main__&apos;:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/02/190602-六月/" rel="next" title="190602 六月">
-                <i class="fa fa-chevron-left"></i> 190602 六月
+              <a href="/2019/06/27/190627-我开始慌了/" rel="next" title="190627 我开始慌了">
+                <i class="fa fa-chevron-left"></i> 190627 我开始慌了
               </a>
             
           </div>
@@ -396,10 +550,6 @@ if __name__ ==&apos;__main__&apos;:
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/03/v2ray自用流程/" rel="prev" title="v2ray自用流程">
-                v2ray自用流程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
