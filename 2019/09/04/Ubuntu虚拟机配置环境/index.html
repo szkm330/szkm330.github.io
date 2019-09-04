@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="首先画图，保存test.ui。进入test.ui所在文件目录，输入命令pyuic5 test.ui –o test.py将test.py开头的from PyQt5 import这行抄进去再加上import sys  import test">
+<meta name="description" content="翻开课本，发现了 Linux的内容，便打算先行搞个虚拟机玩一下。以下是大致流程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图形界面初试">
-<meta property="og:url" content="https://szkm330.github.io/2019/06/02/图形界面初试/index.html">
+<meta property="og:title" content="Ubuntu虚拟机配置环境">
+<meta property="og:url" content="https://szkm330.github.io/2019/09/04/Ubuntu虚拟机配置环境/index.html">
 <meta property="og:site_name" content="SK&#39;s Nikkichou">
-<meta property="og:description" content="首先画图，保存test.ui。进入test.ui所在文件目录，输入命令pyuic5 test.ui –o test.py将test.py开头的from PyQt5 import这行抄进去再加上import sys  import test">
+<meta property="og:description" content="翻开课本，发现了 Linux的内容，便打算先行搞个虚拟机玩一下。以下是大致流程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006fiOeIly1g3n8mmwc64j30k70fsa9y.jpg">
-<meta property="og:updated_time" content="2019-06-02T15:44:41.155Z">
+<meta property="og:updated_time" content="2019-09-04T11:51:46.325Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图形界面初试">
-<meta name="twitter:description" content="首先画图，保存test.ui。进入test.ui所在文件目录，输入命令pyuic5 test.ui –o test.py将test.py开头的from PyQt5 import这行抄进去再加上import sys  import test">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006fiOeIly1g3n8mmwc64j30k70fsa9y.jpg">
+<meta name="twitter:title" content="Ubuntu虚拟机配置环境">
+<meta name="twitter:description" content="翻开课本，发现了 Linux的内容，便打算先行搞个虚拟机玩一下。以下是大致流程。">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://szkm330.github.io/2019/06/02/图形界面初试/">
+  <link rel="canonical" href="https://szkm330.github.io/2019/09/04/Ubuntu虚拟机配置环境/">
 
 
 
 
 
-  <title>图形界面初试 | SK's Nikkichou</title>
+  <title>Ubuntu虚拟机配置环境 | SK's Nikkichou</title>
   
 
 
@@ -254,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/06/02/图形界面初试/">
+    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/09/04/Ubuntu虚拟机配置环境/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="szkm330">
@@ -271,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">图形界面初试</h1>
+          <h1 class="post-title" itemprop="name headline">Ubuntu虚拟机配置环境</h1>
         
 
         <div class="post-meta">
@@ -283,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-02T23:42:52+08:00">
-                2019-06-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-04T19:50:41+08:00">
+                2019-09-04
               </time>
             
 
@@ -343,27 +341,132 @@
       
 
       
-        <p>首先画图，保存test.ui。<br>进入test.ui所在文件目录，输入命令<code>pyuic5 test.ui –o test.py</code><br>将test.py开头的<code>from PyQt5 import</code>这行抄进去<br>再加上<code>import sys</code>  <code>import test</code><br><a id="more"></a><br>有两种基类QMainWindow和QWidget，使用时可以用一下代码。</p>
-<pre><code># QMainWindow的场合
-if __name__ ==&apos;__main__&apos;:
-    app = QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = test.Ui_MainWindow()  # 照抄test.py里的类名
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+        <p>翻开课本，发现了 Linux的内容，便打算先行搞个虚拟机玩一下。<br>以下是大致流程。<br><a id="more"></a></p>
+<p>1.下载<br>VirtualBox、Ubuntu18.04，没啥好说的，看网速。<br>新建虚拟机，选择合适参数。开机放碟装系统。<br>若是卡在”安装语言包”，可断网跳过，待换源后再下载。</p>
+<p>2.换源</p>
+<pre><code># 建立备份
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+# 编辑，之前先apt install一个vim
+sudo vim /etc/apt/sources.list
+</code></pre><p>使用清华源<code>https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/</code></p>
+<p>3.换源后的更新</p>
+<pre><code>sudo apt update
+sudo apt upgrade
+</code></pre><p>4.anaconda安装<br>下载完，再<code>bash xxxxx.sh</code><br>一路回车与yes</p>
+<pre><code># 改环境变量
+sudo vim /etc/profile
+# 最后加
+export PATH=~/anaconda3/bin:$PATH
+# 生效
+source /etc/profile
+</code></pre><p>5.vim配置</p>
+<pre><code>sudo spt install git
+mkdir -p ~/.vim/bundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+</code></pre><p>配置完 <code>:PluginInstall</code><br>删除插件 <code>:PluginClean</code></p>
+<p>附上完整配置，有待改进：</p>
+<pre><code>set nocompatible              &quot; required
+filetype off                  &quot; required
+
+&quot; set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+&quot; alternatively, pass a path where Vundle should install plugins
+&quot;call vundle#begin(&apos;~/some/path/here&apos;)
+
+&quot; let Vundle manage Vundle, required
+Plugin &apos;gmarik/Vundle.vim&apos;
+
+Plugin &apos;altercation/vim-colors-solarized&apos;
+Plugin &apos;scrooloose/nerdtree&apos;
+Plugin &apos;jistr/vim-nerdtree-tabs&apos;
 
 
- # QWidget的场合
-    if  __name__==&quot;__main__&quot;:
-        app=QtWidgets.QApplication(sys.argv)  
-        widget=QtWidgets.QWidget()  
-        ui=test.Ui_Form()  
-        ui.setupUi(widget)  
-        widget.show()  
-        sys.exit(app.exec_())  
-</code></pre><p>最后再测试一下插入图片：<br><img src="https://ws1.sinaimg.cn/large/006fiOeIly1g3n8mmwc64j30k70fsa9y.jpg" alt="测试"></p>
+&quot; Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 
+&quot; All of your Plugins must be added before the following line
+call vundle#end()            &quot; required
+filetype plugin indent on    &quot; required
+
+set nobackup
+set noswapfile
+
+set splitbelow
+set splitright
+&quot;split navigations
+nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;
+nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;
+nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;
+nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
+
+let python_highlight_all=1
+
+&quot; 设置NerdTree
+map &lt;F3&gt; :NERDTreeMirror&lt;CR&gt;
+map &lt;F3&gt; :NERDTreeToggle&lt;CR&gt;
+let NERDTreeQuitOnOpen=1    &quot; Nerdtree is quit, when file is opened
+let NERDTreeShowBookmarks=1 
+let NERDTreeIgnore=[&apos;\~$&apos;, &apos;\.pyc$&apos;, &apos;\.swp$&apos;]
+
+&quot;用浅色高亮当前行
+autocmd InsertLeave * se nocul
+autocmd InsertEnter * se cul
+
+syntax enable
+set background=dark
+set t_Co=256
+colorscheme solarized
+
+set number &quot;显示行号
+set nowrap    &quot;不自动折行
+set showmatch    &quot;显示匹配的括号
+set showcmd &quot;在状态行显示目前所执行的命令，未完成的指令片段也会显示出来
+set scrolloff=3        &quot;距离顶部和底部3行&quot;
+set encoding=utf-8  &quot;编码
+set fenc=utf-8      &quot;编码
+set mouse=a        &quot;启用鼠标
+set hlsearch        &quot;搜索高亮
+syntax on    &quot;语法高亮
+
+au BufNewFile,BufRead *.py
+\ set tabstop=4   &quot;tab宽度
+\ set softtabstop=4 
+\ set shiftwidth=4  
+\ set textwidth=79  &quot;行最大宽度
+\ set expandtab       &quot;tab替换为空格键
+\ set autoindent      &quot;自动缩进
+\ set fileformat=unix   &quot;保存文件格式
+
+
+
+map &lt;F5&gt; :call CompileRunGcc()&lt;CR&gt;
+func! CompileRunGcc()
+    exec &quot;w&quot;
+    if &amp;filetype == &apos;c&apos;
+        exec &quot;!g++ % -o %&lt;&quot;
+        exec &quot;!time ./%&lt;&quot;
+    elseif &amp;filetype == &apos;cpp&apos;
+        exec &quot;!g++ % -o %&lt;&quot;
+        exec &quot;!time ./%&lt;&quot;
+    elseif &amp;filetype == &apos;java&apos;
+        exec &quot;!javac %&quot;
+        exec &quot;!time java %&lt;&quot;
+    elseif &amp;filetype == &apos;sh&apos;
+        :!time bash %
+    elseif &amp;filetype == &apos;python&apos;
+        exec &quot;!time python3 %&quot;
+    elseif &amp;filetype == &apos;html&apos;
+        exec &quot;!firefox % &amp;&quot;
+    elseif &amp;filetype == &apos;go&apos;
+        exec &quot;!go build %&lt;&quot;
+        exec &quot;!time go run %&quot;
+    elseif &amp;filetype == &apos;mkd&apos;
+        exec &quot;!~/.vim/markdown.pl % &gt; %.html &amp;&quot;
+        exec &quot;!firefox %.html &amp;&quot;
+    endif
+endfunc
+</code></pre>
       
     </div>
     
@@ -387,8 +490,8 @@ if __name__ ==&apos;__main__&apos;:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/02/190602-六月/" rel="next" title="190602 六月">
-                <i class="fa fa-chevron-left"></i> 190602 六月
+              <a href="/2019/08/22/v2ray坐井观天版/" rel="next" title="v2ray坐井观天版">
+                <i class="fa fa-chevron-left"></i> v2ray坐井观天版
               </a>
             
           </div>
@@ -396,10 +499,6 @@ if __name__ ==&apos;__main__&apos;:
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/03/v2ray自用流程/" rel="prev" title="v2ray自用流程">
-                v2ray自用流程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
