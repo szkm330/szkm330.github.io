@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="首先画图，保存test.ui。进入test.ui所在文件目录，输入命令pyuic5 test.ui –o test.py将test.py开头的from PyQt5 import这行抄进去再加上import sys  import test">
+<meta name="description" content="sublime安装配置步骤。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图形界面初试">
-<meta property="og:url" content="https://szkm330.github.io/2019/06/02/图形界面初试/index.html">
+<meta property="og:title" content="sublime安装配置">
+<meta property="og:url" content="https://szkm330.github.io/2019/10/30/sublime安装配置/index.html">
 <meta property="og:site_name" content="SK&#39;s Nikkichou">
-<meta property="og:description" content="首先画图，保存test.ui。进入test.ui所在文件目录，输入命令pyuic5 test.ui –o test.py将test.py开头的from PyQt5 import这行抄进去再加上import sys  import test">
+<meta property="og:description" content="sublime安装配置步骤。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006fiOeIly1g3n8mmwc64j30k70fsa9y.jpg">
-<meta property="og:updated_time" content="2019-06-02T15:44:41.155Z">
+<meta property="og:updated_time" content="2019-10-30T14:27:54.021Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图形界面初试">
-<meta name="twitter:description" content="首先画图，保存test.ui。进入test.ui所在文件目录，输入命令pyuic5 test.ui –o test.py将test.py开头的from PyQt5 import这行抄进去再加上import sys  import test">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006fiOeIly1g3n8mmwc64j30k70fsa9y.jpg">
+<meta name="twitter:title" content="sublime安装配置">
+<meta name="twitter:description" content="sublime安装配置步骤。">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://szkm330.github.io/2019/06/02/图形界面初试/">
+  <link rel="canonical" href="https://szkm330.github.io/2019/10/30/sublime安装配置/">
 
 
 
 
 
-  <title>图形界面初试 | SK's Nikkichou</title>
+  <title>sublime安装配置 | SK's Nikkichou</title>
   
 
 
@@ -254,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/06/02/图形界面初试/">
+    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/10/30/sublime安装配置/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="szkm330">
@@ -271,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">图形界面初试</h1>
+          <h1 class="post-title" itemprop="name headline">sublime安装配置</h1>
         
 
         <div class="post-meta">
@@ -283,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-02T23:42:52+08:00">
-                2019-06-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T22:27:07+08:00">
+                2019-10-30
               </time>
             
 
@@ -343,26 +341,19 @@
       
 
       
-        <p>首先画图，保存test.ui。<br>进入test.ui所在文件目录，输入命令<code>pyuic5 test.ui –o test.py</code><br>将test.py开头的<code>from PyQt5 import</code>这行抄进去<br>再加上<code>import sys</code>  <code>import test</code><br><a id="more"></a><br>有两种基类QMainWindow和QWidget，使用时可以用一下代码。</p>
-<pre><code># QMainWindow的场合
-if __name__ ==&apos;__main__&apos;:
-    app = QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = test.Ui_MainWindow()  # 照抄test.py里的类名
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
-
-
- # QWidget的场合
-    if  __name__==&quot;__main__&quot;:
-        app=QtWidgets.QApplication(sys.argv)  
-        widget=QtWidgets.QWidget()  
-        ui=test.Ui_Form()  
-        ui.setupUi(widget)  
-        widget.show()  
-        sys.exit(app.exec_())  
-</code></pre><p>最后再测试一下插入图片：<br><img src="https://ws1.sinaimg.cn/large/006fiOeIly1g3n8mmwc64j30k70fsa9y.jpg" alt="测试"></p>
+        <p>sublime安装配置步骤。<br><a id="more"></a></p>
+<p>1.下载</p>
+<p>2.插件安装</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span>//packagecontrol.io/installation?spm=a2c4e<span class="meta">.10696291</span><span class="meta">.0</span><span class="meta">.0</span>.281c19a4N9YKKU</span><br></pre></td></tr></table></figure>
+<p>复制后，CTRL+` 进入控制台，输入回车。<br>接着就可以安装管理插件了——</p>
+<p><strong>ConvertToUTF8</strong><br><strong>sublimerepl</strong><br><strong>SideBarEnhancements</strong><br><strong>anaconda：</strong><br>设置default，第100行改python路径；<br>设置user</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"python_interpreter"</span>:<span class="string">"D:\\tool\\anaconda\\python.exe"</span>,</span><br><span class="line">    <span class="attr">"suppress_word_completions"</span>:<span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"suppress_explicit_completions"</span>:<span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"comlete_parameters"</span>:<span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"swallow_startup_errors"</span>:<span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"anaconda_linting"</span>:<span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3.整体设置<br><strong>配置环境（取名字保存）：</strong><br>build system：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"cmd"</span>: [<span class="string">"D:\\tool\\anaconda\\python.exe"</span>,<span class="string">"-u"</span>,<span class="string">"$file"</span>],</span><br><span class="line">    <span class="attr">"file_regex"</span>: <span class="string">"^[ ]*File \"(...*?)\", line ([0-9]*)"</span>,</span><br><span class="line">    <span class="attr">"selector"</span>: <span class="string">"source.python"</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>设置f5运行：</strong><br>key bingding:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> &#123;  </span><br><span class="line">  </span><br><span class="line"><span class="attr">"keys"</span>:[<span class="string">"f5"</span>],  </span><br><span class="line"><span class="attr">"caption"</span>: <span class="string">"SublimeREPL: Python - RUN current file"</span>,  </span><br><span class="line"><span class="attr">"command"</span>: <span class="string">"run_existing_window_command"</span>, <span class="attr">"args"</span>: &#123;<span class="attr">"id"</span>: <span class="string">"repl_python_run"</span>,  </span><br><span class="line"><span class="attr">"file"</span>: <span class="string">"config/Python/Main.sublime-menu"</span>&#125;  </span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>setting一览：</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">"color_scheme"</span>: <span class="string">"Monokai.sublime-color-scheme"</span>,</span><br><span class="line">	<span class="attr">"default_encoding"</span>: <span class="string">"UTF-8"</span>,</span><br><span class="line">	<span class="attr">"font_face"</span>: <span class="string">"Source Code Pro"</span>,</span><br><span class="line">	<span class="attr">"font_size"</span>: <span class="number">12</span>,</span><br><span class="line">	<span class="attr">"ignored_packages"</span>:</span><br><span class="line">	[</span><br><span class="line">		<span class="string">"Vintage"</span></span><br><span class="line">	],</span><br><span class="line">	<span class="attr">"theme"</span>: <span class="string">"Default.sublime-theme"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -387,8 +378,8 @@ if __name__ ==&apos;__main__&apos;:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/02/190602-六月/" rel="next" title="190602 六月">
-                <i class="fa fa-chevron-left"></i> 190602 六月
+              <a href="/2019/09/23/git与github/" rel="next" title="git与github">
+                <i class="fa fa-chevron-left"></i> git与github
               </a>
             
           </div>
@@ -396,10 +387,6 @@ if __name__ ==&apos;__main__&apos;:
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/03/v2ray自用流程/" rel="prev" title="v2ray自用流程">
-                v2ray自用流程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
