@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="基于QTdesigner的PyQt编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QTdesigner入门">
+<meta property="og:url" content="https://szkm330.github.io/2019/12/11/QTdesigner入门/index.html">
+<meta property="og:site_name" content="SK&#39;s Nikkichou">
+<meta property="og:description" content="基于QTdesigner的PyQt编程">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-11T06:40:05.628Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="QTdesigner入门">
+<meta name="twitter:description" content="基于QTdesigner的PyQt编程">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://szkm330.github.io/2019/12/11/QTdesigner入门/">
+
+
+
+
+
+  <title>QTdesigner入门 | SK's Nikkichou</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SK's Nikkichou</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://szkm330.github.io/2019/12/11/QTdesigner入门/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="szkm330">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/0.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SK's Nikkichou">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">QTdesigner入门</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-11T14:38:58+08:00">
+                2019-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>基于QTdesigner的PyQt编程</p>
+<a id="more"></a>
+<h2 id="引用界面"><a href="#引用界面" class="headerlink" title="引用界面"></a><strong>引用界面</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#首先你需要在引用的python文件内导入该对象所在的文件，也就是main_menu.py</span></span><br><span class="line"><span class="keyword">import</span> main_menu   <span class="comment">#导入该对象所在文件</span></span><br><span class="line">Ui_MainWindow = main_menu.Ui_MainWindow<span class="comment">#指定Ui_MainWindow 为main_menu文件下的Ui_MainWindow对象。</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CoperQt</span><span class="params">(QtWidgets.QMainWindow,Ui_MainWindow)</span>:</span><span class="comment">#创建一个Qt对象</span></span><br><span class="line"><span class="comment">#这里的第一个变量是你该窗口的类型，第二个是该窗口对象。</span></span><br><span class="line"><span class="comment">#这里是主窗口类型。所以设置成当QtWidgets.QMainWindow。</span></span><br><span class="line"><span class="comment">#你的窗口是一个会话框时你需要设置成:QtWidgets.QDialog</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        QtWidgets.QMainWindow.__init__(self)  <span class="comment"># 创建主界面对象</span></span><br><span class="line">        Ui_MainWindow.__init__(self)<span class="comment">#主界面对象初始化</span></span><br><span class="line">        self.setupUi(self)  <span class="comment">#配置主界面对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app = QtWidgets.QApplication(sys.argv)</span><br><span class="line">    window = CoperQt()<span class="comment">#创建QT对象</span></span><br><span class="line">    window.show()<span class="comment">#QT对象显示</span></span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+<h2 id="按钮：push-button"><a href="#按钮：push-button" class="headerlink" title="按钮：push button"></a><strong>按钮：push button</strong></h2><p>将按钮的事件绑定一个函数，当事件触发，那么函数就运行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">self.Button0.clicked.connect(self.start_find)  <span class="comment"># button0的点击事件绑定start_find函数</span></span><br><span class="line">关于绑定函数的传参除了可以使用全局变量还可以使用python的<span class="keyword">lambda</span>，如我要传入x：</span><br><span class="line">self.Button0.clicked.connect(command=<span class="keyword">lambda</span>:button_process(x))</span><br></pre></td></tr></table></figure>
+<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a><strong>定时器</strong></h2><p>让你的界面定时的去执行某个函数，概念基本上就跟单片机的中断是一样的。<br>比如我在窗口显示一个时间，我需要他每一秒都更新窗口的时间信息，那么我就需要设置一个窗口定时器，代码如下:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">self.testTimer = QtCore.QTimer()  <span class="comment"># 创建定时器</span></span><br><span class="line">self.testTimer.timeout.connect(self.show_time)  <span class="comment"># 定时超时事件绑定show_time这个函数          </span></span><br><span class="line">self.testTimer.start(<span class="number">1000</span>)          <span class="comment">#定时器每一秒执行一次</span></span><br></pre></td></tr></table></figure></p>
+<p>show_time函数<br>也可以把别的函数绑定到定时器上，让他定时运行<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_time</span><span class="params">(self)</span>:</span></span><br><span class="line">    self.time_now = time.strftime(<span class="string">'%Y-%m-%d %H:%M:%S'</span>, time.localtime(time.time()))<span class="comment">#</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="下拉选项栏：combo-box"><a href="#下拉选项栏：combo-box" class="headerlink" title="下拉选项栏：combo box"></a><strong>下拉选项栏：combo box</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">选项栏有两个标识，一个是每一栏的编号index(从<span class="number">0</span>开始)，一个是每一栏的文本内容text:</span><br><span class="line">    self.comboBox.insertItem(<span class="number">0</span>, self.tr(<span class="string">"None"</span>))  <span class="comment"># 第一个选项插入空</span></span><br><span class="line">    self.comboBox.insertItem(<span class="number">0</span>, <span class="string">"x"</span>) 第一个选项插入x字符</span><br><span class="line">    self.comboBox.currentText() 读取选项栏文本：</span><br><span class="line">    self.comboBox.currentIndex() 读取选项栏编号：</span><br><span class="line">    self.comboBox.setCurrentIndex() 设置当前选项栏显示位置：(通过编号)</span><br><span class="line">    self.comboBox.setCurrentText() 设置当前选项栏显示位置：(通过文本)</span><br><span class="line">    self.comboBox.clear() 清空当前选项框内元素</span><br></pre></td></tr></table></figure>
+<p>如何让选项栏选中后不用按按钮就触发事件？<br>实际上就是运用到上面的定时器，你可以将定时器绑定上选项栏读取函数，这个函数每隔200MS或者1s读取选项栏的数值，这样，用户的只要更换选项立马能够做出反映</p>
+<h2 id="会话窗"><a href="#会话窗" class="headerlink" title="会话窗"></a><strong>会话窗</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">header:会话窗标题</span><br><span class="line">info：会话窗内容</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_message</span><span class="params">(self,header = <span class="string">"说明"</span>,info = <span class="string">"无"</span>)</span>:</span></span><br><span class="line">        QtWidgets.QMessageBox.information(self,header,info,QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No) </span><br><span class="line"><span class="comment"># 使用infomation信息框             </span></span><br><span class="line"></span><br><span class="line"><span class="comment">#判断按键（显示两个按键，是和否）</span></span><br><span class="line">QtWidgets.QMessageBox.Yes|QtWidgets.QMessageBox.No)</span><br><span class="line"><span class="comment">#确定按键（显示一个按键，OK）</span></span><br><span class="line"><span class="comment"># QtWidgets.QMessageBox.Ok</span></span><br></pre></td></tr></table></figure>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a><strong>文件操作</strong></h2><p>打开文件：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">open_file</span><span class="params">(self)</span>:</span></span><br><span class="line">        fileName1, filetype =QtWidgets.QFileDialog.getOpenFileName(self,</span><br><span class="line">                                <span class="string">"请打开EXCEL文件"</span>, path,<span class="string">"Text Files (*.xlsx;*.xls)"</span>)  <span class="comment"># 设置文件扩展名过滤,</span></span><br><span class="line">        <span class="comment"># 注意用双分号间隔</span></span><br><span class="line">        <span class="keyword">if</span> len(fileName1) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        fileName1 = fileName1.replace(<span class="string">'/'</span>, <span class="string">"\\"</span>)<span class="comment">#win下需要进行文件分隔符转换</span></span><br><span class="line">        my_excel = EasyExcel(filename=fileName1)<span class="comment">#这是我自己写的excel读取程序这里创建一个excel读取对象</span></span><br><span class="line">        self.data_list = my_excel.get_content()<span class="comment">#读取excel的内容，返回是一个字典列表</span></span><br><span class="line">        QtWidgets.QMessageBox.information(self,  <span class="comment"># 使用infomation信息框</span></span><br><span class="line">                                          <span class="string">"说明"</span>, <span class="string">"数据加载成功"</span>, QtWidgets.QMessageBox.Ok)</span><br><span class="line"><span class="comment">#会话窗提醒，数据读取成功</span></span><br></pre></td></tr></table></figure>
+<p>保存文件:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_file</span><span class="params">(self)</span>:</span>  <span class="comment">#只是获取路径，实际保存需要调用OS模块</span></span><br><span class="line">    fileName2, ok2 = QtWidgets.QFileDialog.getSaveFileName(self,</span><br><span class="line">                        <span class="string">"文件保存"</span>,<span class="string">"C:/"</span>,<span class="string">"Text Files (*.xlsx);;Text Files (*.xls);;All Files (*)"</span>)</span><br><span class="line">    <span class="comment">#地址分隔符更改，QT获取的地址分隔符为/，而python为\\，需要替换</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> fileName2:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    fileName2 = fileName2.replace(<span class="string">'/'</span>,<span class="string">"\\"</span>)</span><br><span class="line">    <span class="comment">#获取到文件路径，接下来的操作就需要你自己填写</span></span><br></pre></td></tr></table></figure>
+<h2 id="表格：table-view"><a href="#表格：table-view" class="headerlink" title="表格：table view"></a><strong>表格：table view</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">self.tableWidget.setHorizontalHeaderLabels(key_list)<span class="comment">#设置表格表头数据</span></span><br><span class="line">self.tableWidget.setColumnCount(x)           <span class="comment">#设置表格的列数</span></span><br><span class="line">self.tableWidget.setRowCount(x)           <span class="comment">#设置表格的行数</span></span><br><span class="line">self.tableWidget.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.ResizeToContents)   <span class="comment">#表格设置成大小随内容改变</span></span><br><span class="line">self.tableWidget.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)  <span class="comment"># 表格设置成只读</span></span><br><span class="line">self.tableWidget.setSelectionBehavior(QTableWidget.SelectRows)<span class="comment">#选择行</span></span><br><span class="line">self.table.setSelectionMode(QTableWidget.SingleSelection)<span class="comment">#选择单个行</span></span><br><span class="line">self.tableWidget.setAlternatingRowColors(<span class="keyword">True</span>)<span class="comment">#隔行改变颜色</span></span><br><span class="line">self.tableWidget.verticalHeader().sectionClicked.connect(self.VerSectionClicked)  <span class="comment"># 表头单击信号</span></span><br><span class="line">self.tableWidget.horizontalHeader().sectionClicked.connect(self.HorSectionClicked)  <span class="comment"># 表头单击信号</span></span><br><span class="line">self.tableWidget.rowCount()<span class="comment">#返回表格的行数</span></span><br><span class="line">self.tableWidget.columnCount()<span class="comment">#返回表格的列数</span></span><br><span class="line">self.tableWidget.item(row,clo ).text()<span class="comment">#获取row行clo列的表格数据，从0开始</span></span><br><span class="line">self.tableWidget.clear()<span class="comment">#表格清空，不清空的话会永远残留</span></span><br><span class="line">QTableWidget.clearContents() 只清除表项，不清除表头。</span><br><span class="line">self.tableWidget.setItem(row,col, QTableWidgetItem（<span class="string">"content"</span>）)<span class="comment">#设置表格内容为字符串"content"</span></span><br><span class="line">self.tableWidget.insertColumn(self, int column) 在某一列插入新的一列。</span><br><span class="line">self.tableWidget.insertRow(self, int row)在某一行插入新的一行。</span><br><span class="line">self.tableWidget.removeColumn(self, int column) 移除column列及其内容。</span><br><span class="line">QTableWidget.removeRow(self, int row)移除第row行及其内容。</span><br><span class="line">QTableWidget.setShowGrid(<span class="keyword">False</span>)<span class="comment">#不显示分割线</span></span><br><span class="line">QTableWidget.hideRow(),hideColumn(),showRow(),showColumn()<span class="comment">#隐藏相应的行或者列</span></span><br></pre></td></tr></table></figure>
+<p>在TableWidget内添加其他组件；以下例子是timeEdit组件添加进TableWidget中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self.timeEdit = QtWidgets.QTimeEdit(Dialog)<span class="comment">#创建一个timeEdit</span></span><br><span class="line">self.tableWidget.setCellWidget(<span class="number">0</span>, <span class="number">0</span>, self.timeEdit)<span class="comment">#把timeedit添加进tableWidget内</span></span><br></pre></td></tr></table></figure>
+<h2 id="单选框（圆形）：radio-botton"><a href="#单选框（圆形）：radio-botton" class="headerlink" title="单选框（圆形）：radio botton"></a><strong>单选框（圆形）：radio botton</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">self.radioButton.clicked.connect(self.change_radio)  <span class="comment"># 单选按钮选中绑定函数</span></span><br><span class="line">self.radioButton.hide()  <span class="comment"># 单选框2隐藏</span></span><br><span class="line">self.radioButton.setChecked(<span class="keyword">True</span>)<span class="comment">#单选框选中，反之False</span></span><br><span class="line">self.radioButton.isChecked()   <span class="comment">#单选框是否选中，选中返回True反之False</span></span><br></pre></td></tr></table></figure>
+<p>单独的单选框并不能正常使用，假设我创建了个单选框用作记住密码按钮，实际上我点一下单选框则选中记住密码，但是再点一下他仍然是选中状态并不会取消，<strong>因为系统默认规定必须有且只有一个单选框被选中</strong>。<br>所以这里教大家一个小诀窍，那就是多创建一个单选框，然后将它隐藏掉，这样就可以让两个交替被选中，从而达到点击选中，再点击取消的效果。<br>除此之外有个更好的办法就是不使用单选框，直接使用<strong>复选框（正方形）</strong><br><strong>右键单选框选择变形为checkBox，则变成复选框</strong>，复选框和单选框的操作基本一样，唯一不同的是复选框可以允许一个界面上没有一个被选中，或者全部被选中</p>
+<h2 id="输入框：line-edit"><a href="#输入框：line-edit" class="headerlink" title="输入框：line edit"></a><strong>输入框：line edit</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">self.lineEdit.returnPressed.connect(self.check_info)  <span class="comment"># 文本栏回车绑定函数</span></span><br><span class="line">self.lineEdit.setEchoMode(QtWidgets.QLineEdit.Password)<span class="comment">#设置成密码模式，也就是输入内容显示为实心的圆</span></span><br><span class="line">self.lineEdit.setEchoMode(QtWidgets.QLineEdit.Normal)<span class="comment">#设置成普通模式（默认）</span></span><br><span class="line">self.lineEdit.setText(“hello world”)      <span class="comment"># 设置输入文本</span></span><br><span class="line">self.lineEdit.text()<span class="comment">#返回输入框文本内容</span></span><br><span class="line">self.lineEdit.show()<span class="comment">#显示文本框</span></span><br><span class="line">self.lineEdit.hide()<span class="comment">#隐藏文本框</span></span><br><span class="line">self.lineEdit.clear()<span class="comment">#清空文本框</span></span><br></pre></td></tr></table></figure>
+<h2 id="进度条：progress-bar"><a href="#进度条：progress-bar" class="headerlink" title="进度条：progress bar"></a><strong>进度条：progress bar</strong></h2><p>进度条一般会和定时器一起使用，用定时器绑定一个函数去获取进度然后再改变进度条的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.pbar.setValue(self.step)  <span class="comment">#设置进度条进度 1则为1%</span></span><br></pre></td></tr></table></figure>
+<h2 id="菜单栏：绑定函数触发"><a href="#菜单栏：绑定函数触发" class="headerlink" title="菜单栏：绑定函数触发"></a><strong>菜单栏：绑定函数触发</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Open_file是菜单栏内oepn_file这个按钮</span></span><br><span class="line">self.Open_file.triggered.connect(self.open_file)</span><br></pre></td></tr></table></figure>
+<h2 id="标签：label"><a href="#标签：label" class="headerlink" title="标签：label"></a><strong>标签：label</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">self.label.setText(</span><br><span class="line">translate(<span class="string">"MainWindow"</span>,<span class="string">"&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style="</span></span><br><span class="line">                        <span class="string">"\" font-size:18pt; color:#0000ff;\"&gt;</span></span><br><span class="line"><span class="string">&#123;&#125;</span></span><br><span class="line"><span class="string">&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"</span></span><br><span class="line">).format(self.time_now))</span><br></pre></td></tr></table></figure>
+<h2 id="时间相关"><a href="#时间相关" class="headerlink" title="时间相关"></a>时间相关</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">self.timeEdit.setDisplayFormat(<span class="string">'hh:mm'</span>)<span class="comment">#设置时间格式</span></span><br><span class="line">now_day = time.strftime(<span class="string">"%Y-%m-%d"</span>, time.localtime())</span><br><span class="line">self.dateEdit.setDate(QDate.fromString(now_day, <span class="string">'yyyy-MM-dd'</span>))</span><br><span class="line">time = QtCore.QTime.toString(self.timeEdit.time(),<span class="string">"hh:mm"</span>)<span class="comment">#获取时间便转化成字符串</span></span><br><span class="line">now_time = time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>, time.localtime())</span><br><span class="line">self.dateTimeEdit.setDateTime(QDateTime.fromString(now_time, <span class="string">'yyyy-MM-dd hh:mm:ss'</span>))<span class="comment">#</span></span><br><span class="line">time = int(QtCore.QDateTime.toTime_t(self.dateTimeEdit.dateTime()))<span class="comment">#获取时间并转化成时间戳</span></span><br><span class="line">self.dateTimeEdit.setDateTime(QtCore.QDateTime.fromTime_t(时间戳))<span class="comment">#通过时间戳设置timeedit显示的时间</span></span><br><span class="line">self.dateTimeEdit.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(<span class="number">2106</span>, <span class="number">2</span>, <span class="number">7</span>), QtCore.QTime(<span class="number">14</span>, <span class="number">28</span>, <span class="number">15</span>)))<span class="comment">#设置最大时间</span></span><br></pre></td></tr></table></figure>
+<h2 id="在pyqt内创建一个线程"><a href="#在pyqt内创建一个线程" class="headerlink" title="在pyqt内创建一个线程"></a><strong>在pyqt内创建一个线程</strong></h2><p>pyqt编程下经常会用到线程，因为有些耗时的操作，如果不放入线程中，则会引发qt界面的刷新卡顿，甚至没有反应。<br>(多线程你也可以用python自带的thread模块做，但是因为gil锁，实际上只会用单核。但是qthread是用c++实现的，所以实际推荐用qthread来写多线程(如果条件允许))</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">newThread</span><span class="params">(QtCore.QThread)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,parent=None)</span>:</span></span><br><span class="line">        super(readThread, self).__init__(parent)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">            print(<span class="string">"hello"</span>)</span><br><span class="line">            time.sleep(<span class="number">10</span>)</span><br><span class="line"><span class="comment">#如上操作创建了一个newThread的线程，</span></span><br><span class="line">工作是每十秒打印一个hello。</span><br><span class="line">当然如果想让线程开启，则需要在qt主程序内进行如下操作：</span><br><span class="line"></span><br><span class="line">self.new_thread = newThread()  <span class="comment">#创建线程对象</span></span><br><span class="line">self.new_thread.start()  <span class="comment">#开启。</span></span><br><span class="line"><span class="comment">#开启后你的qt就会起一个线程，</span></span><br><span class="line">并且跑在run的<span class="keyword">while</span>循环以内。</span><br><span class="line">如果你想要中断这个线程。</span><br><span class="line">那么就可以用标志位的形式从<span class="keyword">while</span>(<span class="number">1</span>)里面<span class="keyword">break</span>出来。</span><br></pre></td></tr></table></figure>
+<p>在qt内给线程添加回调函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">updateFigure</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        GetLastStatus = getLastStatus()<span class="comment">#</span></span><br><span class="line">        GetLastStatus.finished_signal.connect(success)<span class="comment">#回调绑定成功函数</span></span><br><span class="line">        GetLastStatus.error_signal.connect(error)<span class="comment">#回调绑定失败函数</span></span><br><span class="line">        GetLastStatus.start()<span class="comment">#程序开始</span></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">success</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    <span class="title">print</span><span class="params">(<span class="string">"Success"</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">def</span> <span class="title">error</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    <span class="title">print</span><span class="params">(<span class="string">"error"</span>)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">class</span> <span class="title">getLastStatus</span><span class="params">(QThread)</span>:</span></span><br><span class="line">    finished_signal = pyqtSignal(str)<span class="comment">#创建完成信号</span></span><br><span class="line">    error_signal = pyqtSignal(str)<span class="comment">#创建错误信号</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None)</span>:</span></span><br><span class="line">        super().__init__(parent)</span><br><span class="line">     </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span><span class="comment">#重写内置运行函数</span></span><br><span class="line">        <span class="keyword">if</span> self._test() == <span class="keyword">True</span>:</span><br><span class="line">            self.finished_signal.emit(<span class="string">'done'</span>)</span><br><span class="line">            <span class="comment">#如果完成，发送完成信号</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.error_signal.emit(<span class="string">"error"</span>)</span><br><span class="line">            <span class="comment">#如果出错，发送出错信号</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_test</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#return True</span></span><br><span class="line">          <span class="keyword">return</span> <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<h2 id="在pyqt内嵌Matplotlib"><a href="#在pyqt内嵌Matplotlib" class="headerlink" title="在pyqt内嵌Matplotlib"></a><strong>在pyqt内嵌Matplotlib</strong></h2><p>首先创建一个名为MatplotMenu的UI文件，在该文件内添加一个QFrame组件，然后创建一个LineEdit和两个Button<br>接着，创建一个名为MatplotObject.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span>  PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> Ui.MatplotMenu <span class="keyword">as</span> MatplotMenu <span class="comment">#UI目录下的MatplotMenu</span></span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line">matplotlib.use(<span class="string">"Qt5Agg"</span>)  <span class="comment"># 声明使用QT5</span></span><br><span class="line"><span class="keyword">from</span> matplotlib.backends.backend_qt5agg <span class="keyword">import</span> FigureCanvasQTAgg <span class="keyword">as</span> FigureCanvas</span><br><span class="line"><span class="keyword">from</span> matplotlib.figure <span class="keyword">import</span> Figure</span><br><span class="line"><span class="keyword">import</span> matplotlib.dates <span class="keyword">as</span> mdate</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line">Ui_MainDialog = MatplotMenu.Ui_Dialog</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MatplotMenu</span><span class="params">(QDialog,Ui_MainDialog)</span>:</span><span class="comment">#创建一个会话框对象</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(MatplotMenu,self).__init__(parent)</span><br><span class="line">        self.title = <span class="string">'Matplot测试'</span><span class="comment">#设置窗体title</span></span><br><span class="line">        self.setupUi(self)</span><br><span class="line">        self._createCanvas()<span class="comment">#创建画布</span></span><br><span class="line">        self._createLayouts()<span class="comment">#配置组件</span></span><br><span class="line">        self.show()<span class="comment">#显示组件</span></span><br><span class="line">        self._updateFigure()<span class="comment">#更新曲线图</span></span><br><span class="line">        self.timer = QTimer(self)<span class="comment">#创建定时更新定时器</span></span><br><span class="line">        self.timer.timeout.connect(self._updateFigure)<span class="comment">#绑定更新函数        </span></span><br><span class="line">        self.pushButton_2.clicked.connect(self._reFresh)<span class="comment">#按钮2绑定开始更新函数</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">closeEvent</span><span class="params">(self, event)</span>:</span><span class="comment">#重写会话框关闭信号产生函数</span></span><br><span class="line">        reply = QMessageBox.question(self, <span class="string">'Message'</span>,</span><br><span class="line">                                     <span class="string">"Are you sure to quit?"</span>, QMessageBox.Yes, QMessageBox.No)<span class="comment">#产生提醒会话界面</span></span><br><span class="line">        <span class="keyword">if</span> reply == QMessageBox.Yes:<span class="comment">#如果确认</span></span><br><span class="line">            <span class="keyword">if</span> self.timer.isActive():<span class="comment">#定时器激活状态</span></span><br><span class="line">                self.timer.stop()<span class="comment">#停止定时器</span></span><br><span class="line">                print(<span class="string">"停止定时器"</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">"无需停止定时器"</span>)</span><br><span class="line">            event.accept()<span class="comment">#关闭事件接受</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            event.ignore()<span class="comment">#舍弃关闭事件</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_reFresh</span><span class="params">(self)</span>:</span><span class="comment">#刷新按钮绑定函数</span></span><br><span class="line">        <span class="keyword">if</span> self.timer.isActive() == <span class="keyword">True</span>:<span class="comment">#如果定时器激活状态</span></span><br><span class="line">            self.timer.stop()<span class="comment">#关闭定时器</span></span><br><span class="line">            self.pushButton_2.setText(<span class="string">"实时更新"</span>)<span class="comment">#设置按钮字符</span></span><br><span class="line">            print(<span class="string">"关闭定时器......"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self._updateFigure()<span class="comment">#刷新界面</span></span><br><span class="line">            self.timer.start(<span class="number">30000</span>)<span class="comment">#开启定时器</span></span><br><span class="line">            self.pushButton_2.setText(<span class="string">"暂停更新"</span>)<span class="comment">#设置按钮字符</span></span><br><span class="line">            print(<span class="string">"打开定时器......"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_updateFigure</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self._showLine()<span class="comment">#显示曲线</span></span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            print(e)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_showLine</span><span class="params">(self)</span>:</span></span><br><span class="line">        self._canvas.refreshLine()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_errorProcess</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_createCanvas</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.setWindowTitle(self.title)<span class="comment">#设置title</span></span><br><span class="line">        <span class="comment"># self.setGeometry(self.left, self.top, self.width, self.height)</span></span><br><span class="line">        self._canvas = PlotCanvas(self, width=<span class="number">5</span>, height=<span class="number">4</span>)<span class="comment">#创建matplot对象</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_createLayouts</span><span class="params">(self)</span>:</span></span><br><span class="line">        layout = QHBoxLayout(self.frame)<span class="comment">#选定frame组件</span></span><br><span class="line">        layout.setContentsMargins(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">        layout.addWidget(self._canvas) <span class="comment"># 添加matplot对象到QT组件内，这是最重要的一个函数，用于将matplotlib和qt绑定</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PlotCanvas</span><span class="params">(FigureCanvas)</span>:</span><span class="comment">#创建一个matplot对象</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, parent=None, width=<span class="number">5</span>, height=<span class="number">4</span>, dpi=<span class="number">100</span>)</span>:</span></span><br><span class="line">        self._Font = &#123;</span><br><span class="line">            <span class="string">'family'</span>: <span class="string">'SimHei'</span>,</span><br><span class="line">            <span class="string">'weight'</span>: <span class="string">'bold'</span>,</span><br><span class="line">            <span class="string">'size'</span>: <span class="number">15</span>&#125;</span><br><span class="line">        fig = Figure(figsize=(width, height), dpi=dpi)</span><br><span class="line">        FigureCanvas.__init__(self, fig)</span><br><span class="line">        self.setParent(parent)</span><br><span class="line">        FigureCanvas.setSizePolicy(self,QSizePolicy.Expanding,QSizePolicy.Expanding)</span><br><span class="line">        FigureCanvas.updateGeometry(self)</span><br><span class="line">        self._ax = self.figure.add_subplot(<span class="number">111</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">refreshLine</span><span class="params">(self)</span>:</span></span><br><span class="line">        x = [];y = []<span class="comment">#这里自行创建数据</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self._ax.plot(x,y, <span class="string">'--r*'</span>, label=<span class="string">"Matplot Test"</span>)<span class="comment">#绘图</span></span><br><span class="line">            self._ax.set_title(<span class="string">'Matplot Test'</span>, fontdict=self._Font)</span><br><span class="line">            self._ax.set_xlabel(<span class="string">"X轴"</span>, fontdict=self._Font)</span><br><span class="line">            self._ax.set_ylabel(<span class="string">"Y轴"</span>, fontdict=self._Font)</span><br><span class="line">            self._ax.xaxis.grid(<span class="keyword">True</span>, which=<span class="string">'major'</span>)  <span class="comment"># x坐标轴的网格使用主刻度</span></span><br><span class="line">            self._ax.yaxis.grid(<span class="keyword">True</span>, which=<span class="string">"major"</span>)</span><br><span class="line">            self.draw()</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            print(e)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">plot</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">import</span> datetime</span><br><span class="line">        price_list = [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"PRICE"</span> : <span class="string">"0.0"</span>,</span><br><span class="line">                <span class="string">"Time"</span> : <span class="string">"2018-01-22 18:56:00"</span>&#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"PRICE"</span>: <span class="string">"0.16461536288261414"</span>,</span><br><span class="line">                <span class="string">"Time"</span>: <span class="string">"2018-01-22 20:07:18"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"PRICE"</span>: <span class="string">"0.0"</span>,</span><br><span class="line">                <span class="string">"Time"</span>: <span class="string">"2018-01-22 20:19:30"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"PRICE"</span>: <span class="string">"0.01397849153727293"</span>,</span><br><span class="line">                <span class="string">"Time"</span>: <span class="string">"2018-01-22 20:31:50"</span></span><br><span class="line">            &#125;</span><br><span class="line">                    ]</span><br><span class="line">        Font = &#123;<span class="string">'family'</span>: <span class="string">'SimHei'</span>,</span><br><span class="line">                <span class="string">'weight'</span>: <span class="string">'bold'</span>,</span><br><span class="line">                <span class="string">'size'</span>: <span class="number">15</span>&#125;</span><br><span class="line">        x = []</span><br><span class="line">        y = []  <span class="comment"># 定义两个列表</span></span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> price_list:  <span class="comment"># 逐年取出单年所有信息</span></span><br><span class="line">            y.append(float(item[<span class="string">"PRICE"</span>]))  <span class="comment"># 价格数值加入y列表</span></span><br><span class="line">            x.append(datetime.datetime.strptime(item[<span class="string">"Time"</span>], <span class="string">"%Y-%m-%d %H:%M:%S"</span>))</span><br><span class="line">            <span class="comment"># print(type(datetime.datetime.strptime(item["Time"], "%Y-%m-%d %H:%M:%S")))</span></span><br><span class="line"></span><br><span class="line">        self._ax = self.figure.add_subplot(<span class="number">111</span>)</span><br><span class="line">        self._ax.plot(x,y, <span class="string">'--r*'</span>,label = <span class="string">"NH3"</span>)</span><br><span class="line">        self._ax.set_title(<span class="string">'测试曲线图'</span>,fontdict = self._Font)</span><br><span class="line">        self._ax.set_xlabel(<span class="string">"时间(\"年-月-日 小时:分:秒\")"</span>,fontdict=self._Font)</span><br><span class="line">        self._ax.set_ylabel(<span class="string">"价格($)"</span>,fontdict=self._Font)</span><br><span class="line">        self._ax.xaxis.set_major_formatter(mdate.DateFormatter(<span class="string">'%Y-%m-%d %H:%M:%S'</span>))</span><br><span class="line">        self._ax.xaxis.grid(<span class="keyword">True</span>, which=<span class="string">'major'</span>)  <span class="comment"># x坐标轴的网格使用主刻度</span></span><br><span class="line">        self._ax.yaxis.grid(<span class="keyword">True</span>, which=<span class="string">"major"</span>)</span><br><span class="line">        <span class="comment"># self._ax.xaxis.set_xticklabels(rotation=75)</span></span><br><span class="line">        <span class="comment"># for label in self._ax.get_xticklabels() + self._ax.get_yticklabels():</span></span><br><span class="line">        <span class="comment">#     label.set_fontsize(6)</span></span><br><span class="line">            <span class="comment"># label.set_bbox(dict(facecolor='green', edgecolor='None', alpha=0.7))</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># self._ax.xticklabels(rotation=75)</span></span><br><span class="line">        <span class="comment"># self.xticks(rotation=75)</span></span><br><span class="line">        self.draw()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">import</span> sys</span><br><span class="line">    app =QApplication(sys.argv)</span><br><span class="line">    window = App()<span class="comment">#创建QT对象</span></span><br><span class="line">    window.show()<span class="comment">#QT对象显示</span></span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/30/sublime安装配置/" rel="next" title="sublime安装配置">
+                <i class="fa fa-chevron-left"></i> sublime安装配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/0.png" alt="szkm330">
+            
+              <p class="site-author-name" itemprop="name">szkm330</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引用界面"><span class="nav-number">1.</span> <span class="nav-text">引用界面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按钮：push-button"><span class="nav-number">2.</span> <span class="nav-text">按钮：push button</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定时器"><span class="nav-number">3.</span> <span class="nav-text">定时器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下拉选项栏：combo-box"><span class="nav-number">4.</span> <span class="nav-text">下拉选项栏：combo box</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会话窗"><span class="nav-number">5.</span> <span class="nav-text">会话窗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件操作"><span class="nav-number">6.</span> <span class="nav-text">文件操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格：table-view"><span class="nav-number">7.</span> <span class="nav-text">表格：table view</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单选框（圆形）：radio-botton"><span class="nav-number">8.</span> <span class="nav-text">单选框（圆形）：radio botton</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入框：line-edit"><span class="nav-number">9.</span> <span class="nav-text">输入框：line edit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进度条：progress-bar"><span class="nav-number">10.</span> <span class="nav-text">进度条：progress bar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#菜单栏：绑定函数触发"><span class="nav-number">11.</span> <span class="nav-text">菜单栏：绑定函数触发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签：label"><span class="nav-number">12.</span> <span class="nav-text">标签：label</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间相关"><span class="nav-number">13.</span> <span class="nav-text">时间相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在pyqt内创建一个线程"><span class="nav-number">14.</span> <span class="nav-text">在pyqt内创建一个线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在pyqt内嵌Matplotlib"><span class="nav-number">15.</span> <span class="nav-text">在pyqt内嵌Matplotlib</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">szkm330</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
