@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SK&#39;s Nikkichou</title>
+    <link>https://szkm330.github.io/</link>
+    <description>Recent content on SK&#39;s Nikkichou</description>
+    <image>
+      <title>SK&#39;s Nikkichou</title>
+      <url>https://szkm330.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://szkm330.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 23 Sep 2019 14:35:45 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git与github</title>
+      <link>https://szkm330.github.io/posts/git%E4%B8%8Egithub/</link>
+      <pubDate>Mon, 23 Sep 2019 14:35:45 +0900</pubDate>
+      
+      <guid>https://szkm330.github.io/posts/git%E4%B8%8Egithub/</guid>
+      <description># 生成 ssh-keygen -t ed25519 -C “email@outlook.com” # 设置 git config --global user.name &amp;quot;user&amp;quot; git config --global user.email &amp;quot;email@outlook.com&amp;quot; git config --global init.defaultBranch main # 在文件夹下 git init # 初始化仓库 git add . # 添加该路径下所有文件 git commit -m &amp;quot;first commit&amp;quot; # 提交，m后是备注 git remote add origin https://github.com/szkm330/demo.git # 连接，仓库名origin git remote rm origin # 删除连接 git remote -v # 查看 git branch -M main # 换名 git branch -a # 查看 git push -u origin main # 上传 git pull origin main 官网摘录</description>
+    </item>
+    
+    
+  </channel>
+</rss>
