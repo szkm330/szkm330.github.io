@@ -11,7 +11,26 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Nov 2023 02:57:32 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Nov 2023 15:04:06 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>两个月的DDL</title>
+      <link>https://szkm330.github.io/posts/%E4%B8%A4%E4%B8%AA%E6%9C%88%E7%9A%84ddl/</link>
+      <pubDate>Fri, 17 Nov 2023 15:04:06 +0900</pubDate>
+      
+      <guid>https://szkm330.github.io/posts/%E4%B8%A4%E4%B8%AA%E6%9C%88%E7%9A%84ddl/</guid>
+      <description>&amp;hellip;&amp;hellip;
+我想我这辈子都治不好拖延症了。
+入学合格后，还有半年时间一定好好学！然后什么都没学就开学了。
+第一学期，还来得及赶快补基础！然后就混过了第一学期。
+暑假，抓紧时间补！还是混过去了。
+现在，
+「以下の国際学会に向けて研究を進めてください」
+「提出締切は来年の1月19日です。」
+还有两个月时间，
+看论文，总结想法，代码实装，祈祷出效果，汇总结果&amp;hellip;
+我可以吗（笑）</description>
+    </item>
+    
     <item>
       <title>利用git actions进行博客上传</title>
       <link>https://szkm330.github.io/posts/%E5%88%A9%E7%94%A8git-actions%E8%BF%9B%E8%A1%8C%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0/</link>
