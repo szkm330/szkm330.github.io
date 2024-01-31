@@ -11,7 +11,19 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Nov 2023 02:57:32 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Feb 2024 01:09:01 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>面试算法抱佛脚-LinkedList</title>
+      <link>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-linkedlist/</link>
+      <pubDate>Thu, 01 Feb 2024 01:09:01 +0900</pubDate>
+      
+      <guid>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-linkedlist/</guid>
+      <description>重度拖延症开始准备coding test了，也不知道到底需要多少。
+如果不报line，应该easy就行了吧？
+快慢指针 (环问题) 指fast一定能追上slow，通常设fast步长为2，slow为1
+class Solution: def hasCycle(self, head: ListNode) -&amp;gt; bool: # 空链表或链表只有一个节点，无环 if not head or head.next == None: return False # 初始化快慢指针 fast = slow = head # 如果不存在环，肯定 fast 先指向 null # 细节：fast 每次走 2 步，所以要确定 fast 和 fast.next 不为空，不然会报执行出错。 while fast and fast.next: # 快指针移动 2 步，慢指针移动 1 步 fast = fast.next.next slow = slow.next # 快慢指针相遇，有环 if fast == slow: return True return False 两帧相遇在环的中途，（设：head到环起点为x，到环中途为y，绕回环起点为z）</description>
+    </item>
+    
     <item>
       <title>利用git actions进行博客上传</title>
       <link>https://szkm330.github.io/posts/%E5%88%A9%E7%94%A8git-actions%E8%BF%9B%E8%A1%8C%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0/</link>
