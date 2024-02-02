@@ -73,6 +73,15 @@ name: github pages on: push: branches: - main # Set a branch to deploy pull_requ
       <description># 生成 ssh-keygen -t ed25519 -C “email@outlook.com” # 设置 git config --global user.name &amp;quot;user&amp;quot; git config --global user.email &amp;quot;email@outlook.com&amp;quot; git config --global init.defaultBranch main # 在文件夹下 git init # 初始化仓库 git add . # 添加该路径下所有文件 git commit -m &amp;quot;first commit&amp;quot; # 提交，m后是备注 git remote add origin https://github.com/szkm330/demo.git # 连接，仓库名origin git remote rm origin # 删除连接 git remote -v # 查看 git branch -M main # 换名 git branch -a # 查看 git push -u origin main # 上传 git pull origin main 官网摘录</description>
     </item>
     
+    <item>
+      <title>About</title>
+      <link>https://szkm330.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://szkm330.github.io/about/</guid>
+      <description>about</description>
+    </item>
+    
     
     
   </channel>
