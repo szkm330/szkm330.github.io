@@ -11,24 +11,23 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Feb 2024 22:22:49 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Feb 2024 01:50:49 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基本情报刷题记录</title>
       <link>https://szkm330.github.io/posts/%E5%9F%BA%E6%9C%AC%E6%83%85%E6%8A%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</link>
-      <pubDate>Thu, 01 Feb 2024 22:22:49 +0900</pubDate>
+      <pubDate>Sun, 04 Feb 2024 01:50:49 +0900</pubDate>
       
       <guid>https://szkm330.github.io/posts/%E5%9F%BA%E6%9C%AC%E6%83%85%E6%8A%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</guid>
       <description>テクノロジ系 基礎理論 音频压缩计算
 例题，周波数10kHz，ビット数16ビットで4秒間サンプリング，圧縮率1／4のADPCMを用いて圧縮した場合，データ量は20kバイト $$ 16bit \rightarrow 2byte\\ 10k \times2 \times4 \times \frac{1}{4} = 20k $$
 アナログ信号 → デジタル信号：標本化（在一定时间间隔下进行测定）→量子化（将数值近似为整数）→符号化（整数转为2进制）
-コンピュータ構成要素 CPU書き込む方式
+送信誤り検出方式
+CRC方式(Cyclic Redundancy Check)： 巡回冗長検査，使用「生成多項式」进行检查 ハミング符号方式： 使用「検査ビット」 パリティチェック方式： 使用「パリティビット」，有垂直和水平两种方向 コンピュータ構成要素 CPU書き込む方式
 ライトスルー(write through)，同时写入cache和主存。可保持一贯性，但速度慢 ライトバック(write back)，只写cache，丢掉时才写进主存。更复杂，但快 割込み(Interrupt)：暂停当前进程，优先处理
-内部割込み: 原因为执行中的程序（プログラム割込み，SVC割込み, ページフォールト） 外部割り込み:（タイマ割込み，コンソール割込み，入出力割込み，機械チェック割込み） システム構成要素 予備系システム
+内部割込み: 原因为执行中的程序（プログラム割込み，SVC割込み, ページフォールト） 外部割り込み:（タイマ割込み，コンソール割込み，入出力割込み，機械チェック割込み） MIPS(million instructions per second) CPU性能指标，1秒能执行 “x百万” 个命令
+システム構成要素 予備系システム
 ホットスタンバイ（即時復旧・高速復旧），一直在旁边一起同步热身，直接切换 ウォームスタンバイ（中間的復旧），开机待机了，但没有开系统 コールドスタンバイ（段階的復旧），只准备了场所，到时候搬器材过去重开 RAID：复数的HDD作为一个来使用
-RAID 0 （ストライピング） 分散写入多个硬盘，并列处理，高速化 RAID 1 （ミラーリング） 每个硬盘写入同样的data，信赖性提升，但效率下降 RAID 2 （基础：0） 读写单位bit，用ハミング符号订正 RAID 3 读写单位bit/byte，用パリティビット订正 RAID 4 （和3类似） 读写单位block RAID 5 读写单位block，パリティ（连订正用的也分散装了） セキュリティ サイバーセキュリティ経営ガイドライン： 面对服务器攻击，企业的三原则
-领导要主动推进安全投资，因为这个不赚钱 还得关照供应链中的商业伙伴，不能只顾自己公司的安全 安全对策的相关，平时就要积极和关系者沟通。 AES-256: 使用256位密钥进行加密和解密。在ブルートフォース攻撃（暴力法）之下，最多要试$2^{256}$次，平均要试$2^{255}$次
-黑密码的方法
-辞書攻撃，使用常用语列表，逐一尝试 スニッフィング，窃听数据包 ブルートフォース攻撃，暴力法 デジタル署名：&amp;ldquo;发件人私钥 &amp;ldquo;用于生成数字签名， &amp;ldquo;发件人公钥 &amp;ldquo;用于接收端的验证。接收端可以知道两点 → 发起者是否合法，文件是否被篡改（不能锁定被改的具体位置）</description>
+RAID 0 （ストライピング） 分散写入多个硬盘，并列处理，高速化 RAID 1 （ミラーリング） 每个硬盘写入同样的data，信赖性提升，但效率下降 RAID 2 （基础：0） 读写单位bit，用ハミング符号订正 RAID 3 读写单位bit/byte，用パリティビット订正 RAID 4 （和3类似） 读写单位block RAID 5 读写单位block，パリティ（连订正用的也分散装了） システムの処理能力向上方法</description>
     </item>
     
     <item>
