@@ -35,5 +35,24 @@ right = &amp;#39;1280&amp;#39; left = &amp;#39;-1345&amp;#39; # 弹幕停留时�
 最近换成了群友写的StarTools，显卡压制，最主要的是可以直接压emoji不会乱码了，省去了一个处理emoji的步骤。</description>
     </item>
     
+    <item>
+      <title>记歌词工具</title>
+      <link>https://szkm330.github.io/posts/%E8%AE%B0%E6%AD%8C%E8%AF%8D%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sun, 22 Mar 2020 16:57:28 +0900</pubDate>
+      
+      <guid>https://szkm330.github.io/posts/%E8%AE%B0%E6%AD%8C%E8%AF%8D%E5%B7%A5%E5%85%B7/</guid>
+      <description>给自己写了个小工具，用来平时每周MOR的歌词编辑。
+虽然替换换行符功能不如直接打开word，但渐变色工具还是挺方便的。
+以下是心得。
+一般的main
+if __name__ == &amp;#39;__main__&amp;#39;: QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling) app = QtWidgets.QApplication(sys.argv) mainwin = Ui_MainWindow() mainwin.show() sys.exit(app.exec_()) 如果是多窗口，要一起声明一遍，后面再用show和close进行关系调整
+login = Ui_Dialog_in() win = Ui_MainWindow() login.show() 因为不是写在里面的，所以self要改成自己定的窗口名字
+QtWidgets.QMessageBox.information(mainwin,&#39;Error&#39;,&#39;出现错误&#39;, QtWidgets.QMessageBox.Ok)
+涉及特殊符号再用一个反斜杠 ，再用一个大括号
+self.changeto.setText(&amp;#34;\\N{\\fn思源黑体}&amp;#34;) c0 = &amp;#39;{{\\1vc({},{},{},{})}}&amp;#39;.format(c1,c2,c3,c4) 剩下的就是git了
+GitHub 远程端添加了 README.md 文件后，无法再次 push 的主要原因是 GitHub 中的README.md 文件不在本地代码目录中，需要合并同步
+git pull --rebase origin master git push -u origin master </description>
+    </item>
+    
   </channel>
 </rss>
