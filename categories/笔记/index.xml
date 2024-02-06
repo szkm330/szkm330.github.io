@@ -86,29 +86,5 @@ sudo apt-get install socat 如果安装报错，那么可能是因为系统缺�
 sudo ~/.acme.sh/acme.sh --issue -d mydomain.me --standalone -k ec-256 脚本每隔60天会自动更新，然后手动更新：</description>
     </item>
     
-    <item>
-      <title>v2ray自用流程</title>
-      <link>https://szkm330.github.io/posts/v2ray%E8%87%AA%E7%94%A8%E6%B5%81%E7%A8%8B/</link>
-      <pubDate>Mon, 03 Jun 2019 17:55:00 +0900</pubDate>
-      
-      <guid>https://szkm330.github.io/posts/v2ray%E8%87%AA%E7%94%A8%E6%B5%81%E7%A8%8B/</guid>
-      <description>用的是Ubuntu16.04，主要流程如下：
-# 刷新源及更新软件 sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade # 安装 curl sudo apt install curl 如果不是 root 环境需要进入 sudo su 接着就可以安装 Project V(V2Ray) 了 --以上：不知道是不是必须，姑且做一下-- bash &amp;lt;(curl -L -s https://install.direct/go.sh) # 上列命令会自动安装 V2Ray，然后执行下面命令运行 systemctl start v2ray 记下端口号和id　vim /etc/v2ray/config.json进行修改和查看 systemctl start|restart|stop|status v2ray其余控制 https://www.uuidgenerator.net/ 可以生成ID
-客户端相关 下载v2ray-windows-64.zip（然后直接编辑config似乎就可以了） 不过可以继续下载v2rayN.zip解压至同一个路径下 接着把相应信息填进去，大概就可以了
-若要升级，直接再运行一次安装脚本</description>
-    </item>
-    
-    <item>
-      <title>Proxifier设置总结</title>
-      <link>https://szkm330.github.io/posts/proxifier%E8%AE%BE%E7%BD%AE%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Sat, 30 Mar 2019 14:20:21 +0900</pubDate>
-      
-      <guid>https://szkm330.github.io/posts/proxifier%E8%AE%BE%E7%BD%AE%E6%80%BB%E7%BB%93/</guid>
-      <description>刚好看到有人提起proxifier，就顺便下载来设置了一下，发现下载器连接的问题也随之解决了，可喜可贺。 以下记录简要步骤。
-proxy servers 127.0.0.1 1080 socks5 检查check 确定 此时默认全部走全局
-rules编辑 添加规则，选择Shadowsocks.exe为直连direct （允许发送到代理服务器的数据包通过，防止循环代理错误） 还可以再添加rule，如把QQ.exe设置为direct
-Name Resolution Resolve hostnames through proxy 防止DNS污染</description>
-    </item>
-    
   </channel>
 </rss>
