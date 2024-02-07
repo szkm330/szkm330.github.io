@@ -14,20 +14,20 @@
     <lastBuildDate>Fri, 17 Nov 2023 02:57:32 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>利用git actions进行博客上传</title>
-      <link>https://szkm330.github.io/posts/make-blog/</link>
+      <link>https://szkm330.github.io/posts/3f978965/</link>
       <pubDate>Fri, 17 Nov 2023 02:57:32 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/make-blog/</guid>
+      <guid>https://szkm330.github.io/posts/3f978965/</guid>
       <description>建库，设key 一个公共放网页，username.github.io 一个私有放全部，blog Setting - Developer setting - Personal access tokens， 创建一个 Token，选repo和workflow权限（只能看一次，记得复制） 私有库的 Settings - Secrets - Actions 添加PERSONAL_TOKEN 设置 创建blog/.github/workflows/build.yml
 name: github pages on: push: branches: - main # Set a branch to deploy pull_request: jobs: deploy: runs-on: ubuntu-latest steps: - uses: actions/checkout@v3 with: submodules: true # Fetch Hugo themes (true OR recursive) fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod - name: Setup Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: &amp;#39;latest&amp;#39; extended: true - name: Build run: hugo --minify - name: Deploy uses: peaceiris/actions-gh-pages@v3 if: github.</description>
     </item>
     
     <item>
       <title>git与github</title>
-      <link>https://szkm330.github.io/posts/use-git/</link>
+      <link>https://szkm330.github.io/posts/b1297e5f/</link>
       <pubDate>Mon, 23 Sep 2019 14:35:45 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/use-git/</guid>
+      <guid>https://szkm330.github.io/posts/b1297e5f/</guid>
       <description># 生成 ssh-keygen -t ed25519 -C “email@outlook.com” # 设置 git config --global user.name &amp;quot;user&amp;quot; git config --global user.email &amp;quot;email@outlook.com&amp;quot; git config --global init.defaultBranch main # 在文件夹下 git init # 初始化仓库 git add . # 添加该路径下所有文件 git commit -m &amp;quot;first commit&amp;quot; # 提交，m后是备注 git remote add origin https://github.com/szkm330/demo.git # 连接，仓库名origin git remote rm origin # 删除连接 git remote -v # 查看 git branch -M main # 换名 git branch -a # 查看 git push -u origin main # 上传 git pull origin main 官网摘录</description>
     </item>
     
