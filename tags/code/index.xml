@@ -14,10 +14,10 @@
     <lastBuildDate>Thu, 01 Feb 2024 08:37:20 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>面试算法抱佛脚-栈/堆/哈希</title>
-      <link>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-%E6%A0%88%E5%A0%86%E5%93%88%E5%B8%8C/</link>
+      <link>https://szkm330.github.io/posts/codetest-2/</link>
       <pubDate>Thu, 01 Feb 2024 08:37:20 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-%E6%A0%88%E5%A0%86%E5%93%88%E5%B8%8C/</guid>
+      <guid>https://szkm330.github.io/posts/codetest-2/</guid>
       <description>stack stack = [ ]，进栈.append(data)，出栈.pop()，取顶stack[-1]
 # 括号匹配问题，注意if的顺序的范围，及时return for char in string: if char in {&amp;#39;(&amp;#39;, &amp;#39;[&amp;#39;, &amp;#39;{&amp;#39;}: stack.push(char) elif char in {&amp;#39;)&amp;#39;, &amp;#39;]&amp;#39;, &amp;#39;}&amp;#39;} and len(stack.stack) &amp;gt; 0: if stack.gettop() == check_dict[char]: stack.pop() else: return False if len(stack.stack) == 0: return True else: return False heap 一般用于堆排序，优先队列。对于最小堆，每个点都小于或等于其子节点。
 # 创建最小堆 heapq.heapify(list) # 如果堆的大小小于k，直接添加元素 # 否则，如果新元素大于堆顶元素，先弹出堆顶，再添加新元素 # 这样可以确保堆中始终是最大的k个元素 if len(self.heap) &amp;lt; self.k: heapq.heappush(self.heap, val) elif val &amp;gt; self.heap[0]: heapq.heappushpop(self.heap, val) # 堆顶元素是第k大的元素 return self.</description>
@@ -25,10 +25,10 @@
     
     <item>
       <title>面试算法抱佛脚-LinkedList</title>
-      <link>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-linkedlist/</link>
+      <link>https://szkm330.github.io/posts/codetest-1/</link>
       <pubDate>Thu, 01 Feb 2024 01:09:01 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-linkedlist/</guid>
+      <guid>https://szkm330.github.io/posts/codetest-1/</guid>
       <description>重度拖延症开始准备coding test了，也不知道到底需要多少。
 如果不报line，应该easy就行了吧？
 快慢指针 (环问题) 指fast一定能追上slow，通常设fast步长为2，slow为1

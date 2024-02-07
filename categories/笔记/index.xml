@@ -14,19 +14,19 @@
     <lastBuildDate>Sun, 04 Feb 2024 01:50:49 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基本情报刷题记录</title>
-      <link>https://szkm330.github.io/posts/%E5%9F%BA%E6%9C%AC%E6%83%85%E6%8A%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</link>
+      <link>https://szkm330.github.io/posts/fe-siken/</link>
       <pubDate>Sun, 04 Feb 2024 01:50:49 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E5%9F%BA%E6%9C%AC%E6%83%85%E6%8A%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</guid>
+      <guid>https://szkm330.github.io/posts/fe-siken/</guid>
       <description>基本情报技术者 备考笔记</description>
     </item>
     
     <item>
       <title>面试算法抱佛脚-栈/堆/哈希</title>
-      <link>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-%E6%A0%88%E5%A0%86%E5%93%88%E5%B8%8C/</link>
+      <link>https://szkm330.github.io/posts/codetest-2/</link>
       <pubDate>Thu, 01 Feb 2024 08:37:20 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-%E6%A0%88%E5%A0%86%E5%93%88%E5%B8%8C/</guid>
+      <guid>https://szkm330.github.io/posts/codetest-2/</guid>
       <description>stack stack = [ ]，进栈.append(data)，出栈.pop()，取顶stack[-1]
 # 括号匹配问题，注意if的顺序的范围，及时return for char in string: if char in {&amp;#39;(&amp;#39;, &amp;#39;[&amp;#39;, &amp;#39;{&amp;#39;}: stack.push(char) elif char in {&amp;#39;)&amp;#39;, &amp;#39;]&amp;#39;, &amp;#39;}&amp;#39;} and len(stack.stack) &amp;gt; 0: if stack.gettop() == check_dict[char]: stack.pop() else: return False if len(stack.stack) == 0: return True else: return False heap 一般用于堆排序，优先队列。对于最小堆，每个点都小于或等于其子节点。
 # 创建最小堆 heapq.heapify(list) # 如果堆的大小小于k，直接添加元素 # 否则，如果新元素大于堆顶元素，先弹出堆顶，再添加新元素 # 这样可以确保堆中始终是最大的k个元素 if len(self.heap) &amp;lt; self.k: heapq.heappush(self.heap, val) elif val &amp;gt; self.heap[0]: heapq.heappushpop(self.heap, val) # 堆顶元素是第k大的元素 return self.</description>
@@ -34,10 +34,10 @@
     
     <item>
       <title>面试算法抱佛脚-LinkedList</title>
-      <link>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-linkedlist/</link>
+      <link>https://szkm330.github.io/posts/codetest-1/</link>
       <pubDate>Thu, 01 Feb 2024 01:09:01 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-linkedlist/</guid>
+      <guid>https://szkm330.github.io/posts/codetest-1/</guid>
       <description>重度拖延症开始准备coding test了，也不知道到底需要多少。
 如果不报line，应该easy就行了吧？
 快慢指针 (环问题) 指fast一定能追上slow，通常设fast步长为2，slow为1
@@ -46,29 +46,29 @@ class Solution: def hasCycle(self, head: ListNode) -&amp;gt; bool: # 空链表�
     
     <item>
       <title>利用git actions进行博客上传</title>
-      <link>https://szkm330.github.io/posts/%E5%88%A9%E7%94%A8git-actions%E8%BF%9B%E8%A1%8C%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0/</link>
+      <link>https://szkm330.github.io/posts/make-blog/</link>
       <pubDate>Fri, 17 Nov 2023 02:57:32 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E5%88%A9%E7%94%A8git-actions%E8%BF%9B%E8%A1%8C%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0/</guid>
+      <guid>https://szkm330.github.io/posts/make-blog/</guid>
       <description>建库，设key 一个公共放网页，username.github.io 一个私有放全部，blog Setting - Developer setting - Personal access tokens， 创建一个 Token，选repo和workflow权限（只能看一次，记得复制） 私有库的 Settings - Secrets - Actions 添加PERSONAL_TOKEN 设置 创建blog/.github/workflows/build.yml
 name: github pages on: push: branches: - main # Set a branch to deploy pull_request: jobs: deploy: runs-on: ubuntu-latest steps: - uses: actions/checkout@v3 with: submodules: true # Fetch Hugo themes (true OR recursive) fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod - name: Setup Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: &amp;#39;latest&amp;#39; extended: true - name: Build run: hugo --minify - name: Deploy uses: peaceiris/actions-gh-pages@v3 if: github.</description>
     </item>
     
     <item>
       <title>git与github</title>
-      <link>https://szkm330.github.io/posts/git%E4%B8%8Egithub/</link>
+      <link>https://szkm330.github.io/posts/use-git/</link>
       <pubDate>Mon, 23 Sep 2019 14:35:45 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/git%E4%B8%8Egithub/</guid>
+      <guid>https://szkm330.github.io/posts/use-git/</guid>
       <description># 生成 ssh-keygen -t ed25519 -C “email@outlook.com” # 设置 git config --global user.name &amp;quot;user&amp;quot; git config --global user.email &amp;quot;email@outlook.com&amp;quot; git config --global init.defaultBranch main # 在文件夹下 git init # 初始化仓库 git add . # 添加该路径下所有文件 git commit -m &amp;quot;first commit&amp;quot; # 提交，m后是备注 git remote add origin https://github.com/szkm330/demo.git # 连接，仓库名origin git remote rm origin # 删除连接 git remote -v # 查看 git branch -M main # 换名 git branch -a # 查看 git push -u origin main # 上传 git pull origin main 官网摘录</description>
     </item>
     
     <item>
       <title>V2ray绚烂装订版</title>
-      <link>https://szkm330.github.io/posts/v2ray%E7%BB%9A%E7%83%82%E8%A3%85%E8%AE%A2%E7%89%88/</link>
+      <link>https://szkm330.github.io/posts/use-v2ray/</link>
       <pubDate>Tue, 04 Jun 2019 21:37:53 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/v2ray%E7%BB%9A%E7%83%82%E8%A3%85%E8%AE%A2%E7%89%88/</guid>
+      <guid>https://szkm330.github.io/posts/use-v2ray/</guid>
       <description>又研究了一下ws+tls，其实我也不知道有没有搞出来，也不知道到底效果如何，姑且搞一下&amp;hellip;
 基本安装 # 刷新源及更新软件 sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade # 脚本安装 bash &amp;lt;(curl -L -s https://install.direct/go.sh) # 编辑 V2Ray 配置 vim /etc/v2ray/config.json bbr wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh chmod +x bbr.sh ./bbr.sh 域名操作 注册域名，A 记录指向自己
 生成证书，使用 acme.sh 脚本生成

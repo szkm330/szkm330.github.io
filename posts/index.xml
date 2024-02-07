@@ -14,19 +14,19 @@
     <lastBuildDate>Sun, 04 Feb 2024 01:50:49 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基本情报刷题记录</title>
-      <link>https://szkm330.github.io/posts/%E5%9F%BA%E6%9C%AC%E6%83%85%E6%8A%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</link>
+      <link>https://szkm330.github.io/posts/fe-siken/</link>
       <pubDate>Sun, 04 Feb 2024 01:50:49 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E5%9F%BA%E6%9C%AC%E6%83%85%E6%8A%A5%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/</guid>
+      <guid>https://szkm330.github.io/posts/fe-siken/</guid>
       <description>基本情报技术者 备考笔记</description>
     </item>
     
     <item>
       <title>面试算法抱佛脚-栈/堆/哈希</title>
-      <link>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-%E6%A0%88%E5%A0%86%E5%93%88%E5%B8%8C/</link>
+      <link>https://szkm330.github.io/posts/codetest-2/</link>
       <pubDate>Thu, 01 Feb 2024 08:37:20 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-%E6%A0%88%E5%A0%86%E5%93%88%E5%B8%8C/</guid>
+      <guid>https://szkm330.github.io/posts/codetest-2/</guid>
       <description>stack stack = [ ]，进栈.append(data)，出栈.pop()，取顶stack[-1]
 # 括号匹配问题，注意if的顺序的范围，及时return for char in string: if char in {&amp;#39;(&amp;#39;, &amp;#39;[&amp;#39;, &amp;#39;{&amp;#39;}: stack.push(char) elif char in {&amp;#39;)&amp;#39;, &amp;#39;]&amp;#39;, &amp;#39;}&amp;#39;} and len(stack.stack) &amp;gt; 0: if stack.gettop() == check_dict[char]: stack.pop() else: return False if len(stack.stack) == 0: return True else: return False heap 一般用于堆排序，优先队列。对于最小堆，每个点都小于或等于其子节点。
 # 创建最小堆 heapq.heapify(list) # 如果堆的大小小于k，直接添加元素 # 否则，如果新元素大于堆顶元素，先弹出堆顶，再添加新元素 # 这样可以确保堆中始终是最大的k个元素 if len(self.heap) &amp;lt; self.k: heapq.heappush(self.heap, val) elif val &amp;gt; self.heap[0]: heapq.heappushpop(self.heap, val) # 堆顶元素是第k大的元素 return self.</description>
@@ -34,10 +34,10 @@
     
     <item>
       <title>面试算法抱佛脚-LinkedList</title>
-      <link>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-linkedlist/</link>
+      <link>https://szkm330.github.io/posts/codetest-1/</link>
       <pubDate>Thu, 01 Feb 2024 01:09:01 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E9%9D%A2%E8%AF%95%E7%AE%97%E6%B3%95%E6%8A%B1%E4%BD%9B%E8%84%9A-linkedlist/</guid>
+      <guid>https://szkm330.github.io/posts/codetest-1/</guid>
       <description>重度拖延症开始准备coding test了，也不知道到底需要多少。
 如果不报line，应该easy就行了吧？
 快慢指针 (环问题) 指fast一定能追上slow，通常设fast步长为2，slow为1
@@ -46,20 +46,20 @@ class Solution: def hasCycle(self, head: ListNode) -&amp;gt; bool: # 空链表�
     
     <item>
       <title>利用git actions进行博客上传</title>
-      <link>https://szkm330.github.io/posts/%E5%88%A9%E7%94%A8git-actions%E8%BF%9B%E8%A1%8C%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0/</link>
+      <link>https://szkm330.github.io/posts/make-blog/</link>
       <pubDate>Fri, 17 Nov 2023 02:57:32 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E5%88%A9%E7%94%A8git-actions%E8%BF%9B%E8%A1%8C%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0/</guid>
+      <guid>https://szkm330.github.io/posts/make-blog/</guid>
       <description>建库，设key 一个公共放网页，username.github.io 一个私有放全部，blog Setting - Developer setting - Personal access tokens， 创建一个 Token，选repo和workflow权限（只能看一次，记得复制） 私有库的 Settings - Secrets - Actions 添加PERSONAL_TOKEN 设置 创建blog/.github/workflows/build.yml
 name: github pages on: push: branches: - main # Set a branch to deploy pull_request: jobs: deploy: runs-on: ubuntu-latest steps: - uses: actions/checkout@v3 with: submodules: true # Fetch Hugo themes (true OR recursive) fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod - name: Setup Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: &amp;#39;latest&amp;#39; extended: true - name: Build run: hugo --minify - name: Deploy uses: peaceiris/actions-gh-pages@v3 if: github.</description>
     </item>
     
     <item>
       <title>记第一次托福</title>
-      <link>https://szkm330.github.io/posts/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%98%E7%A6%8F/</link>
+      <link>https://szkm330.github.io/posts/2021-03-08/</link>
       <pubDate>Mon, 08 Mar 2021 18:12:29 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%89%98%E7%A6%8F/</guid>
+      <guid>https://szkm330.github.io/posts/2021-03-08/</guid>
       <description>记录第一次的托福经历，我们下次托业见。
 酒店环节 比我想象的要简单一些，我还以为要交押金呢，结果直接身份证就可以了。本想到附近的711买点饭团或便当作为晚饭，再顺便买面包牛奶当第二天早餐。结果最近的那家711在广外校内，我看着那个疫情期间“校外人员不得入内”的牌子，就放弃进去了（虽然我觉得应该能进去的吧）。
 接着就是找附近的便利店、超市，但附近范围内的都是满简陋的那种小店，我不放心就还是放弃了。最后走了快二十分钟，到一个楼盘广场那边，在一个比较大规模的便利店买了面包牛奶，顺便在旁边吃了碗牛肉拉面，全程听着亭子里的大爷大妈唱卡拉OK。
@@ -86,19 +86,19 @@ name: github pages on: push: branches: - main # Set a branch to deploy pull_requ
     
     <item>
       <title>LrcToAss48: 口袋48弹幕转换</title>
-      <link>https://szkm330.github.io/posts/lrctoass48-%E5%8F%A3%E8%A2%8B48%E5%BC%B9%E5%B9%95%E8%BD%AC%E6%8D%A2/</link>
+      <link>https://szkm330.github.io/posts/lrc2ass/</link>
       <pubDate>Fri, 19 Feb 2021 04:24:11 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/lrctoass48-%E5%8F%A3%E8%A2%8B48%E5%BC%B9%E5%B9%95%E8%BD%AC%E6%8D%A2/</guid>
+      <guid>https://szkm330.github.io/posts/lrc2ass/</guid>
       <description>口袋48留言转滚动弹幕</description>
     </item>
     
     <item>
       <title>记歌词工具</title>
-      <link>https://szkm330.github.io/posts/%E8%AE%B0%E6%AD%8C%E8%AF%8D%E5%B7%A5%E5%85%B7/</link>
+      <link>https://szkm330.github.io/posts/lyrics-tool/</link>
       <pubDate>Sun, 22 Mar 2020 16:57:28 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E8%AE%B0%E6%AD%8C%E8%AF%8D%E5%B7%A5%E5%85%B7/</guid>
+      <guid>https://szkm330.github.io/posts/lyrics-tool/</guid>
       <description>给自己写了个小工具，用来平时每周MOR的歌词编辑。
 虽然替换换行符功能不如直接打开word，但渐变色工具还是挺方便的。
 以下是心得。
@@ -114,19 +114,19 @@ git pull --rebase origin master git push -u origin master </description>
     
     <item>
       <title>git与github</title>
-      <link>https://szkm330.github.io/posts/git%E4%B8%8Egithub/</link>
+      <link>https://szkm330.github.io/posts/use-git/</link>
       <pubDate>Mon, 23 Sep 2019 14:35:45 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/git%E4%B8%8Egithub/</guid>
+      <guid>https://szkm330.github.io/posts/use-git/</guid>
       <description># 生成 ssh-keygen -t ed25519 -C “email@outlook.com” # 设置 git config --global user.name &amp;quot;user&amp;quot; git config --global user.email &amp;quot;email@outlook.com&amp;quot; git config --global init.defaultBranch main # 在文件夹下 git init # 初始化仓库 git add . # 添加该路径下所有文件 git commit -m &amp;quot;first commit&amp;quot; # 提交，m后是备注 git remote add origin https://github.com/szkm330/demo.git # 连接，仓库名origin git remote rm origin # 删除连接 git remote -v # 查看 git branch -M main # 换名 git branch -a # 查看 git push -u origin main # 上传 git pull origin main 官网摘录</description>
     </item>
     
     <item>
       <title>V2ray绚烂装订版</title>
-      <link>https://szkm330.github.io/posts/v2ray%E7%BB%9A%E7%83%82%E8%A3%85%E8%AE%A2%E7%89%88/</link>
+      <link>https://szkm330.github.io/posts/use-v2ray/</link>
       <pubDate>Tue, 04 Jun 2019 21:37:53 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/v2ray%E7%BB%9A%E7%83%82%E8%A3%85%E8%AE%A2%E7%89%88/</guid>
+      <guid>https://szkm330.github.io/posts/use-v2ray/</guid>
       <description>又研究了一下ws+tls，其实我也不知道有没有搞出来，也不知道到底效果如何，姑且搞一下&amp;hellip;
 基本安装 # 刷新源及更新软件 sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade # 脚本安装 bash &amp;lt;(curl -L -s https://install.direct/go.sh) # 编辑 V2Ray 配置 vim /etc/v2ray/config.json bbr wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh chmod +x bbr.sh ./bbr.sh 域名操作 注册域名，A 记录指向自己
 生成证书，使用 acme.sh 脚本生成
@@ -137,10 +137,10 @@ sudo ~/.acme.sh/acme.sh --issue -d mydomain.me --standalone -k ec-256 脚本每�
     
     <item>
       <title>第一篇</title>
-      <link>https://szkm330.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
+      <link>https://szkm330.github.io/posts/2018-12-25/</link>
       <pubDate>Tue, 25 Dec 2018 08:05:29 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/posts/%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
+      <guid>https://szkm330.github.io/posts/2018-12-25/</guid>
       <description>在考试周的地狱时间里，忙了一个晚上摸索搭建博客，通称摸鱼。
 但不管怎样，我这种性格的人必须要弄出点类似的东西，才会有动力学习下去吧，不然就会在沉默中慢慢消逝了。
 今天看了网上大佬的面试吐槽，突然有点慌，我一个傻子学了一年多好像什么也不会的样子，再这样下去我还不如当初去日语系呢。于是决定从现在开始慢慢学习下去，为了自己。</description>
