@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on SK&#39;s Nikkichou</title>
-    <link>https://szkm330.github.io/tags/</link>
+    <link>https://www.tinclouds.com/tags/</link>
     <description>Recent content in Tags on SK&#39;s Nikkichou</description>
     <image>
       <title>SK&#39;s Nikkichou</title>
-      <url>https://szkm330.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://szkm330.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://www.tinclouds.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://www.tinclouds.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Feb 2024 08:37:20 +0900</lastBuildDate><atom:link href="https://szkm330.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Feb 2024 08:37:20 +0900</lastBuildDate><atom:link href="https://www.tinclouds.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>code</title>
-      <link>https://szkm330.github.io/tags/code/</link>
+      <link>https://www.tinclouds.com/tags/code/</link>
       <pubDate>Thu, 01 Feb 2024 08:37:20 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/tags/code/</guid>
+      <guid>https://www.tinclouds.com/tags/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>git</title>
-      <link>https://szkm330.github.io/tags/git/</link>
+      <link>https://www.tinclouds.com/tags/git/</link>
       <pubDate>Fri, 17 Nov 2023 02:57:32 +0900</pubDate>
       
-      <guid>https://szkm330.github.io/tags/git/</guid>
+      <guid>https://www.tinclouds.com/tags/git/</guid>
       <description></description>
     </item>
     
