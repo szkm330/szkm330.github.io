@@ -3,24 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.tinclouds.com/categories/</loc>
-    <lastmod>2024-02-04T01:50:49+09:00</lastmod>
+    <lastmod>2024-02-08T05:08:03+09:00</lastmod>
+  </url><url>
+    <loc>https://www.tinclouds.com/tags/git/</loc>
+    <lastmod>2024-02-08T05:08:03+09:00</lastmod>
   </url><url>
     <loc>https://www.tinclouds.com/posts/</loc>
-    <lastmod>2024-02-04T01:50:49+09:00</lastmod>
+    <lastmod>2024-02-08T05:08:03+09:00</lastmod>
   </url><url>
     <loc>https://www.tinclouds.com/</loc>
-    <lastmod>2024-02-04T01:50:49+09:00</lastmod>
+    <lastmod>2024-02-08T05:08:03+09:00</lastmod>
+  </url><url>
+    <loc>https://www.tinclouds.com/tags/</loc>
+    <lastmod>2024-02-08T05:08:03+09:00</lastmod>
+  </url><url>
+    <loc>https://www.tinclouds.com/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-02-08T05:08:03+09:00</lastmod>
+  </url><url>
+    <loc>https://www.tinclouds.com/posts/b4681c17/</loc>
+    <lastmod>2024-02-08T05:08:03+09:00</lastmod>
   </url><url>
     <loc>https://www.tinclouds.com/posts/6d5318e4/</loc>
     <lastmod>2024-02-04T01:50:49+09:00</lastmod>
   </url><url>
-    <loc>https://www.tinclouds.com/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2024-02-04T01:50:49+09:00</lastmod>
-  </url><url>
     <loc>https://www.tinclouds.com/tags/code/</loc>
-    <lastmod>2024-02-01T08:37:20+09:00</lastmod>
-  </url><url>
-    <loc>https://www.tinclouds.com/tags/</loc>
     <lastmod>2024-02-01T08:37:20+09:00</lastmod>
   </url><url>
     <loc>https://www.tinclouds.com/posts/306fd6ea/</loc>
@@ -28,9 +34,6 @@
   </url><url>
     <loc>https://www.tinclouds.com/posts/9ffef97c/</loc>
     <lastmod>2024-02-01T01:09:01+09:00</lastmod>
-  </url><url>
-    <loc>https://www.tinclouds.com/tags/git/</loc>
-    <lastmod>2023-11-17T02:57:32+09:00</lastmod>
   </url><url>
     <loc>https://www.tinclouds.com/posts/3f978965/</loc>
     <lastmod>2023-11-17T02:57:32+09:00</lastmod>
