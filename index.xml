@@ -11,7 +11,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Feb 2024 05:08:03 +0900</lastBuildDate><atom:link href="https://www.tinclouds.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Apr 2024 16:03:15 +0900</lastBuildDate><atom:link href="https://www.tinclouds.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>情报安全管理备考</title>
+      <link>https://www.tinclouds.com/posts/e0ba9519/</link>
+      <pubDate>Tue, 09 Apr 2024 16:03:15 +0900</pubDate>
+      
+      <guid>https://www.tinclouds.com/posts/e0ba9519/</guid>
+      <description>情報セキュリティマネジメント 备考笔记</description>
+    </item>
+    
     <item>
       <title>给博客添加自定义域名</title>
       <link>https://www.tinclouds.com/posts/b4681c17/</link>
