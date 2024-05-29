@@ -21,7 +21,8 @@
       <description>列出所有信息
 yt-dlp -F url
 下载
-yt-dlp -f id url 合并
+yt-dlp -f id url
+合并
 ffmpeg -i bestvide.mp4 -i bestaudio.m4a -c:a copy -c:v copy output.mp4
 列出字幕
 yt-dlp --list-subs url
